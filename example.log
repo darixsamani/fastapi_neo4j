@@ -253,3 +253,63 @@ DEBUG: 2023-08-10 20:31:18,217: _bolt4.py: _on_server_state_change: _bolt4: [#AB
 DEBUG: 2023-08-10 20:31:18,218: _bolt4.py: fetch_message: _bolt4: [#AB50]  S: RECORD * 1
 DEBUG: 2023-08-10 20:31:18,218: _bolt4.py: fetch_message: _bolt4: [#AB50]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcAyQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
 DEBUG: 2023-08-10 20:31:18,218: _bolt4.py: _on_server_state_change: _bolt4: [#AB50]  State: STREAMING > READY
+DEBUG: 2023-08-10 20:33:43,236: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-08-10 20:33:43,239: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-08-10 20:33:43,244: _socket.py: _handshake: _socket: [#CDCE]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-08-10 20:33:43,244: _socket.py: _handshake: _socket: [#CDCE]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-08-10 20:33:43,246: _socket.py: _handshake: _socket: [#CDCE]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-08-10 20:33:43,247: _bolt4.py: hello: _bolt4: [#CDCE]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-08-10 20:33:43,251: _bolt4.py: fetch_message: _bolt4: [#CDCE]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-3771', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-08-10 20:33:43,252: _bolt4.py: _on_server_state_change: _bolt4: [#CDCE]  State: CONNECTED > READY
+DEBUG: 2023-08-10 20:33:43,253: _bolt4.py: run: _bolt4: [#CDCE]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-08-10 20:33:43,253: _bolt4.py: pull: _bolt4: [#CDCE]  C: PULL {'n': -1}
+DEBUG: 2023-08-10 20:33:43,254: _bolt4.py: fetch_message: _bolt4: [#CDCE]  S: SUCCESS {'t_first': 0, 'fields': ['x']}
+DEBUG: 2023-08-10 20:33:43,254: _bolt4.py: _on_server_state_change: _bolt4: [#CDCE]  State: READY > STREAMING
+DEBUG: 2023-08-10 20:33:43,255: _bolt4.py: fetch_message: _bolt4: [#CDCE]  S: RECORD * 1
+DEBUG: 2023-08-10 20:33:43,255: _bolt4.py: fetch_message: _bolt4: [#CDCE]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcAyQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-08-10 20:33:43,255: _bolt4.py: _on_server_state_change: _bolt4: [#CDCE]  State: STREAMING > READY
+DEBUG: 2023-08-10 20:34:21,485: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-08-10 20:34:21,488: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-08-10 20:34:21,492: _socket.py: _handshake: _socket: [#AAF4]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-08-10 20:34:21,492: _socket.py: _handshake: _socket: [#AAF4]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-08-10 20:34:21,494: _socket.py: _handshake: _socket: [#AAF4]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-08-10 20:34:21,495: _bolt4.py: hello: _bolt4: [#AAF4]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-08-10 20:34:21,500: _bolt4.py: fetch_message: _bolt4: [#AAF4]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-3772', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-08-10 20:34:21,501: _bolt4.py: _on_server_state_change: _bolt4: [#AAF4]  State: CONNECTED > READY
+DEBUG: 2023-08-10 20:34:21,502: _bolt4.py: run: _bolt4: [#AAF4]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-08-10 20:34:21,502: _bolt4.py: pull: _bolt4: [#AAF4]  C: PULL {'n': -1}
+DEBUG: 2023-08-10 20:34:21,506: _bolt4.py: fetch_message: _bolt4: [#AAF4]  S: SUCCESS {'t_first': 0, 'fields': ['x']}
+DEBUG: 2023-08-10 20:34:21,506: _bolt4.py: _on_server_state_change: _bolt4: [#AAF4]  State: READY > STREAMING
+DEBUG: 2023-08-10 20:34:21,507: _bolt4.py: fetch_message: _bolt4: [#AAF4]  S: RECORD * 1
+DEBUG: 2023-08-10 20:34:21,508: _bolt4.py: fetch_message: _bolt4: [#AAF4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcAyQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-08-10 20:34:21,508: _bolt4.py: _on_server_state_change: _bolt4: [#AAF4]  State: STREAMING > READY
+DEBUG: 2023-08-10 20:35:15,057: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-08-10 20:35:15,061: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-08-10 20:35:15,065: _socket.py: _handshake: _socket: [#E4EE]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-08-10 20:35:15,065: _socket.py: _handshake: _socket: [#E4EE]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-08-10 20:35:15,066: _socket.py: _handshake: _socket: [#E4EE]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-08-10 20:35:15,067: _bolt4.py: hello: _bolt4: [#E4EE]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-08-10 20:35:15,072: _bolt4.py: fetch_message: _bolt4: [#E4EE]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-3777', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-08-10 20:35:15,072: _bolt4.py: _on_server_state_change: _bolt4: [#E4EE]  State: CONNECTED > READY
+DEBUG: 2023-08-10 20:35:15,073: _bolt4.py: run: _bolt4: [#E4EE]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-08-10 20:35:15,073: _bolt4.py: pull: _bolt4: [#E4EE]  C: PULL {'n': -1}
+DEBUG: 2023-08-10 20:35:15,076: _bolt4.py: fetch_message: _bolt4: [#E4EE]  S: SUCCESS {'t_first': 0, 'fields': ['x']}
+DEBUG: 2023-08-10 20:35:15,076: _bolt4.py: _on_server_state_change: _bolt4: [#E4EE]  State: READY > STREAMING
+DEBUG: 2023-08-10 20:35:15,077: _bolt4.py: fetch_message: _bolt4: [#E4EE]  S: RECORD * 1
+DEBUG: 2023-08-10 20:35:15,077: _bolt4.py: fetch_message: _bolt4: [#E4EE]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcAyQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-08-10 20:35:15,077: _bolt4.py: _on_server_state_change: _bolt4: [#E4EE]  State: STREAMING > READY
+DEBUG: 2023-08-10 20:38:33,385: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-08-10 20:38:33,387: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-08-10 20:38:33,391: _socket.py: _handshake: _socket: [#800A]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-08-10 20:38:33,391: _socket.py: _handshake: _socket: [#800A]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-08-10 20:38:33,391: _socket.py: _handshake: _socket: [#800A]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-08-10 20:38:33,392: _bolt4.py: hello: _bolt4: [#800A]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-08-10 20:38:33,395: _bolt4.py: fetch_message: _bolt4: [#800A]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-3794', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-08-10 20:38:33,396: _bolt4.py: _on_server_state_change: _bolt4: [#800A]  State: CONNECTED > READY
+DEBUG: 2023-08-10 20:38:33,396: _bolt4.py: run: _bolt4: [#800A]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-08-10 20:38:33,396: _bolt4.py: pull: _bolt4: [#800A]  C: PULL {'n': -1}
+DEBUG: 2023-08-10 20:38:33,397: _bolt4.py: fetch_message: _bolt4: [#800A]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-08-10 20:38:33,397: _bolt4.py: _on_server_state_change: _bolt4: [#800A]  State: READY > STREAMING
+DEBUG: 2023-08-10 20:38:33,398: _bolt4.py: fetch_message: _bolt4: [#800A]  S: RECORD * 1
+DEBUG: 2023-08-10 20:38:33,399: _bolt4.py: fetch_message: _bolt4: [#800A]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcAyQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-08-10 20:38:33,399: _bolt4.py: _on_server_state_change: _bolt4: [#800A]  State: STREAMING > READY

@@ -5,6 +5,6 @@ from models.post import PosteNode, Posted
 PostRouter = APIRouter()
 
 
-@PostRouter.post("/")
+@PostRouter.post("")
 def add_new_post(post: PosteNode):
     pass

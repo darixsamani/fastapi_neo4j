@@ -13,9 +13,9 @@ class PosteNode(BaseNode):
     __primaryproperty__: ClassVar[str] = "name"
     
     title: str
-    context: str
+    content: str
     date_created : datetime = datetime.now()
-    date_updated :str
+    date_updated : datetime
     tags : List[str]
 
 
