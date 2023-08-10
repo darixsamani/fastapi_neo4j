@@ -5,7 +5,7 @@ from database.database import initiate_database
 from schemas.users import UserSignIn
 from auth.jwt_handler import sign_jwt
 from models.user import find_user_with_email
-
+import logging
 from passlib.context import CryptContext
 
 UserRouter = APIRouter()
@@ -33,7 +33,16 @@ def user_get_token(user_credentials: UserSignIn = Body(...) ):
 
     if user_exist:
 
-        password = hash_helper.verify(user_credentials.password, user_exist.password)
+        try:
+             password = hash_helper.verify(user_credentials.password, user_exist.password)
+
+        except Exception as e:
+            print(f"Exception {e}")
+            logging.error(e)
+            raise HTTPException(status_code=403, detail="Incorrect email or password")
+
+
+       
         if password:
             return sign_jwt(user_id=user_credentials.username)
         

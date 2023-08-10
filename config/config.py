@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     neo4j_uri: str = os.environ.get("NEO4J_URI")
     neo4j_username: str = os.environ.get("NEO4J_USERNAME")
     neo4j_password: str  = os.environ.get("NEO4j_PASSWORD")
+    redis_host: str = os.environ.get("REDIS_HOST")
+    redis_port: str = os.environ.get("REDIS_PORT")
 
 
 

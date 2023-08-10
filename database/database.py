@@ -1,6 +1,7 @@
 from neontology import init_neontology
 from config.config import settings
 from neo4j import GraphDatabase
+from redis import Redis
 
 
 def initiate_database():
@@ -14,3 +15,5 @@ def initiate_database():
 AUTH_NEO4j = (settings.neo4j_username,settings.neo4j_password)
 
 driver =  GraphDatabase.driver(settings.neo4j_uri, auth=AUTH_NEO4j )
+
+redis = Redis(host=settings.redis_host, port=settings.redis_port)
