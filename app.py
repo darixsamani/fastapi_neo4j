@@ -3,11 +3,14 @@ from database.database import initiate_database
 from routes.users import  UserRouter
 from fastapi import FastAPI, Depends
 from auth.jwt_bearer import JWTBearer
-
+import logging
 
 app = FastAPI()
 
 token_listener = JWTBearer()
+
+FORMAT = '%(levelname)s: %(asctime)-15s: %(filename)s: %(funcName)s: %(module)s: %(message)s'
+logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG, format=FORMAT)
 
 
 @app.on_event("startup")
