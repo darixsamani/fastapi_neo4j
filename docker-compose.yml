@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.dev
+
+  neo4j:
+    image: ne4j:latest
+    
+    environment:
+      - NEO4J_AUTH=neo4j/darixsamani
+    ports:
+      - "7474": "7474"
+      - "7687": "7687"
+    volumes:
+      - data : /data
+      - data/logs : /logs
+
+
+volumes:
+  data:
