@@ -1896,3 +1896,67 @@ DEBUG: 2023-08-11 07:46:38,638: _bolt4.py: _on_server_state_change: _bolt4: [#A3
 DEBUG: 2023-08-11 07:46:38,639: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: RECORD * 1
 DEBUG: 2023-08-11 07:46:38,639: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcB+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
 DEBUG: 2023-08-11 07:46:38,640: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: STREAMING > READY
+DEBUG: 2023-08-11 07:49:53,672: _bolt4.py: begin: _bolt4: [#A3D8]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-08-11 07:49:53,673: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {}
+DEBUG: 2023-08-11 07:49:53,674: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-08-11 07:49:53,676: _bolt4.py: run: _bolt4: [#A3D8]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'darix@darix.com'} {}
+DEBUG: 2023-08-11 07:49:53,677: _bolt4.py: pull: _bolt4: [#A3D8]  C: PULL {'n': 1000}
+DEBUG: 2023-08-11 07:49:53,680: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-08-11 07:49:53,681: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: RECORD * 1
+DEBUG: 2023-08-11 07:49:53,682: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-08-11 07:49:53,682: _bolt4.py: commit: _bolt4: [#A3D8]  C: COMMIT
+DEBUG: 2023-08-11 07:49:53,683: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcB+Q'}
+DEBUG: 2023-08-11 07:49:53,683: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-08-11 07:49:53,693: _bolt4.py: begin: _bolt4: [#A3D8]  C: BEGIN {}
+DEBUG: 2023-08-11 07:49:53,694: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {}
+DEBUG: 2023-08-11 07:49:53,695: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-08-11 07:49:53,697: _bolt4.py: run: _bolt4: [#A3D8]  C: RUN '\n        CREATE (n:Poste { title: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': 'string', 'all_props': {'created': Structure[0x49](1691735871, 109000000, 0), 'merged': Structure[0x49](1691735871, 109000000, 0), 'content': 'string', 'date_created': Structure[0x64](1691739234, 767856000), 'date_updated': Structure[0x49](1691735871, 109000000, 0), 'tags': ['string']}} {}
+DEBUG: 2023-08-11 07:49:53,697: _bolt4.py: pull: _bolt4: [#A3D8]  C: PULL {'n': 1000}
+DEBUG: 2023-08-11 07:49:53,704: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'t_first': 6, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-08-11 07:49:53,708: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: RECORD * 1
+DEBUG: 2023-08-11 07:49:53,709: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 7}, 'type': 'rw', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-08-11 07:49:53,710: _bolt4.py: commit: _bolt4: [#A3D8]  C: COMMIT
+DEBUG: 2023-08-11 07:49:53,908: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcCCQ'}
+DEBUG: 2023-08-11 07:49:53,909: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-08-11 07:49:53,912: _bolt4.py: begin: _bolt4: [#A3D8]  C: BEGIN {}
+DEBUG: 2023-08-11 07:49:53,914: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {}
+DEBUG: 2023-08-11 07:49:53,915: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-08-11 07:49:53,916: _bolt4.py: run: _bolt4: [#A3D8]  C: RUN '\n        MATCH (source:User { email: $source_prop }),\n            (target:Poste { title: $target_prop })\n        MERGE (source)-[r:POSTED {  }]->(target)\n        ON MATCH SET r += $set_on_match\n        ON CREATE SET r += $set_on_create\n        SET r += $always_set\n        ' {'source_prop': 'darix@darix.com', 'target_prop': 'string', 'always_set': {'merged': Structure[0x64](1691740193, 909557000)}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1691740193, 909557000)}} {}
+DEBUG: 2023-08-11 07:49:53,916: _bolt4.py: pull: _bolt4: [#A3D8]  C: PULL {'n': 1000}
+DEBUG: 2023-08-11 07:49:53,948: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'t_first': 30, 'fields': [], 'qid': 0}
+DEBUG: 2023-08-11 07:49:53,948: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'stats': {'relationships-created': 1, 'properties-set': 3}, 'type': 'w', 't_last': 0, 'db': 'neo4j', 'notifications': [{'severity': 'INFORMATION', 'description': 'If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (target))', 'code': 'Neo.ClientNotification.Statement.CartesianProduct', 'position': {'column': 1, 'offset': 9, 'line': 2}, 'title': 'This query builds a cartesian product between disconnected patterns.'}]}
+DEBUG: 2023-08-11 07:49:53,949: _bolt4.py: commit: _bolt4: [#A3D8]  C: COMMIT
+DEBUG: 2023-08-11 07:49:53,985: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcCGQ'}
+DEBUG: 2023-08-11 07:49:53,985: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-08-11 07:50:13,373: _bolt4.py: begin: _bolt4: [#A3D8]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-08-11 07:50:13,374: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {}
+DEBUG: 2023-08-11 07:50:13,374: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-08-11 07:50:13,374: _bolt4.py: run: _bolt4: [#A3D8]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'darix@darix.com'} {}
+DEBUG: 2023-08-11 07:50:13,375: _bolt4.py: pull: _bolt4: [#A3D8]  C: PULL {'n': 1000}
+DEBUG: 2023-08-11 07:50:13,379: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-08-11 07:50:13,379: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: RECORD * 1
+DEBUG: 2023-08-11 07:50:13,381: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-08-11 07:50:13,381: _bolt4.py: commit: _bolt4: [#A3D8]  C: COMMIT
+DEBUG: 2023-08-11 07:50:13,383: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcCGQ'}
+DEBUG: 2023-08-11 07:50:13,383: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-08-11 07:50:13,384: _bolt4.py: begin: _bolt4: [#A3D8]  C: BEGIN {}
+DEBUG: 2023-08-11 07:50:13,385: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {}
+DEBUG: 2023-08-11 07:50:13,385: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-08-11 07:50:13,386: _bolt4.py: run: _bolt4: [#A3D8]  C: RUN '\n        CREATE (n:Poste { title: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': 'string', 'all_props': {'created': Structure[0x49](1691735871, 109000000, 0), 'merged': Structure[0x49](1691735871, 109000000, 0), 'content': 'string', 'date_created': Structure[0x64](1691739234, 767856000), 'date_updated': Structure[0x49](1691735871, 109000000, 0), 'tags': ['string']}} {}
+DEBUG: 2023-08-11 07:50:13,387: _bolt4.py: pull: _bolt4: [#A3D8]  C: PULL {'n': 1000}
+DEBUG: 2023-08-11 07:50:13,388: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-08-11 07:50:13,391: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: RECORD * 1
+DEBUG: 2023-08-11 07:50:13,392: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 7}, 'type': 'rw', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-08-11 07:50:13,393: _bolt4.py: commit: _bolt4: [#A3D8]  C: COMMIT
+DEBUG: 2023-08-11 07:50:13,422: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcCKQ'}
+DEBUG: 2023-08-11 07:50:13,422: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-08-11 07:50:13,425: _bolt4.py: begin: _bolt4: [#A3D8]  C: BEGIN {}
+DEBUG: 2023-08-11 07:50:13,426: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {}
+DEBUG: 2023-08-11 07:50:13,426: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-08-11 07:50:13,428: _bolt4.py: run: _bolt4: [#A3D8]  C: RUN '\n        MATCH (source:User { email: $source_prop }),\n            (target:Poste { title: $target_prop })\n        MERGE (source)-[r:POSTED {  }]->(target)\n        ON MATCH SET r += $set_on_match\n        ON CREATE SET r += $set_on_create\n        SET r += $always_set\n        ' {'source_prop': 'darix@darix.com', 'target_prop': 'string', 'always_set': {'merged': Structure[0x64](1691740213, 423627000)}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1691740213, 423627000)}} {}
+DEBUG: 2023-08-11 07:50:13,429: _bolt4.py: pull: _bolt4: [#A3D8]  C: PULL {'n': 1000}
+DEBUG: 2023-08-11 07:50:13,451: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'t_first': 21, 'fields': [], 'qid': 0}
+DEBUG: 2023-08-11 07:50:13,452: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'stats': {'relationships-created': 1, 'properties-set': 4}, 'type': 'w', 't_last': 0, 'db': 'neo4j', 'notifications': [{'severity': 'INFORMATION', 'description': 'If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (target))', 'code': 'Neo.ClientNotification.Statement.CartesianProduct', 'position': {'column': 1, 'offset': 9, 'line': 2}, 'title': 'This query builds a cartesian product between disconnected patterns.'}]}
+DEBUG: 2023-08-11 07:50:13,453: _bolt4.py: commit: _bolt4: [#A3D8]  C: COMMIT
+DEBUG: 2023-08-11 07:50:13,477: _bolt4.py: fetch_message: _bolt4: [#A3D8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcCOQ'}
+DEBUG: 2023-08-11 07:50:13,478: _bolt4.py: _on_server_state_change: _bolt4: [#A3D8]  State: TX_READY_OR_TX_STREAMING > READY
