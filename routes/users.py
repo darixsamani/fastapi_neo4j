@@ -4,7 +4,6 @@ from models.user import UserNode
 from database.database import initiate_database
 from schemas.users import UserSignIn
 from auth.jwt_handler import sign_jwt
-from models.user import find_user_with_email
 import logging
 from passlib.context import CryptContext
 
@@ -44,7 +43,7 @@ def user_get_token(user_credentials: UserSignIn = Body(...) ):
 
        
         if password:
-            return sign_jwt(user_id=user_credentials.username)
+            return sign_jwt(email=user_credentials.username)
         
         raise HTTPException(status_code=403, detail="Incorrect email or password")
     
