@@ -12,7 +12,7 @@ class CollectMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next):
         # do something with the request object, for example
-        # i want to collect data from Request object to redisTimeseris iwth this midddleware
+        # i want to collect data from Request object to redisTimeseris with this midddleware
 
         content_type = request.headers.get('Content-Type')
         print(f"content_type: {content_type}")
