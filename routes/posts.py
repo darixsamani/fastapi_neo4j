@@ -21,13 +21,13 @@ def add_new_post(post: PosteNode, token = Depends(oauth2_scheme)):
     user_exists = decode_jwt(token=token)
 
     if not user_exists:
-        raise HTTPException(status_code=403, detail= f"invalide token  credentials 1")
+        raise HTTPException(status_code=403, detail= f"invalide token  credentials")
     
     users_exist = UserNode.match(user_exists.get("email"))
     
 
     if not users_exist:
-        raise HTTPException(status_code=403, detail= "invalide token credentials 2")
+        raise HTTPException(status_code=403, detail= "invalide token credentials")
     
 
     post = post.create()
@@ -51,11 +51,5 @@ def get_all_post(requesst : Request, token = Depends(oauth2_scheme))->List[Poste
     if user_exists:
         raise HTTPException(status_code=403, detail= "invalide token  credentials")
 
-    
-    
-    
-    
-
-    
 
     return PosteNode.match_nodes()
