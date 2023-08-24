@@ -2,7 +2,7 @@ from fastapi import APIRouter, Body, status
 from fastapi.exceptions import HTTPException
 from models.user import UserNode
 from database.database import initiate_database
-from schemas.users import UserSignIn
+from schemas.users import UserSignIn, Token
 from auth.jwt_handler import sign_jwt
 import logging
 from passlib.context import CryptContext
@@ -25,7 +25,7 @@ def add_new_user(user: UserNode):
     return user
 
 
-@UserRouter.post("/token")
+@UserRouter.post("/token", response_model=Token)
 def user_get_token(user_credentials: UserSignIn = Body(...) ):
     
     user_exist = UserNode.match(user_credentials.username)
