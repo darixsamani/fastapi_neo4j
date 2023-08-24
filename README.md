@@ -4,7 +4,7 @@ A simple starter for building RESTful APIs with FastAPI and NEO4J.
 
 # Features
   - Python FastAPI backend.
-  - MongoDB database.
+  - Neo4J database.
   - Authentication
   - Deployment
 
