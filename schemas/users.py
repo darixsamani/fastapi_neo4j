@@ -13,6 +13,7 @@ class UserUpdate(BaseModel):
     fullname : str
 
 
+
 class UserSignIn(HTTPBasicCredentials):
 
      class Config:
@@ -20,4 +21,8 @@ class UserSignIn(HTTPBasicCredentials):
             "example": {"username": "darix@darix.com", "password": "string"}
         }
 
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
     
