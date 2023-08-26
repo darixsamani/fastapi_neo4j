@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, status, HTTPException
 from models.post import PosteNode, Posted
 from fastapi import Request
 from typing import List
@@ -36,7 +36,7 @@ def add_new_post(post: PosteNode, token = Depends(oauth2_scheme)):
     posted.merge()
 
 
-    return post
+    return HTTPException(status_code=status.HTTP_201_CREATED, detail="post successfully created")
 
 
 @PostRouter.get("")

@@ -22,7 +22,7 @@ def add_new_user(user: UserNode):
         )
     user.password = hash_helper.encrypt(user.password)
     user.create()
-    return user
+    return HTTPException(status_code=status.HTTP_201_CREATED, detail="user successfully created")
 
 
 @UserRouter.post("/token", response_model=Token)
