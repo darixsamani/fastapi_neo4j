@@ -20,4 +20,4 @@ jobs:
         echo ${{ secrets.DOCKER_PASSWORD }}| docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker build -t fastapineo4j .
         docker tag fastapineo4j:latest darixsamani/fastapineo4j:$git_hash
-        docker push darixsamani/fastapineo4jco:$git_hash
+        docker push darixsamani/fastapineo4j:$git_hash
