@@ -27,7 +27,6 @@ class CollectMiddleware(BaseHTTPMiddleware):
         path_parametre_request = request.path_params
         cokies_request = request.cookies
         authentification = request.headers.get("authentification")
-        date = request.Date
         # boby_request = await request.json()
 
         time = datetime.now()

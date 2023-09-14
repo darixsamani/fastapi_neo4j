@@ -1,8 +1,9 @@
-from fastapi import APIRouter, Body, status
+from fastapi import APIRouter, Body, status, Depends
 from fastapi.exceptions import HTTPException
 from models.user import UserNode
 from database.database import initiate_database
 from schemas.users import UserSignIn, Token
+from fastapi.security import OAuth2PasswordRequestForm
 from auth.jwt_handler import sign_jwt
 import logging
 from passlib.context import CryptContext
@@ -25,16 +26,16 @@ def add_new_user(user: UserNode):
     return HTTPException(status_code=status.HTTP_201_CREATED, detail="user successfully created")
 
 
-@UserRouter.post("/token", response_model=Token)
-def user_get_token(user_credentials: UserSignIn = Body(...) ):
+@UserRouter.post("/token")
+def user_get_token(user_credentiel: OAuth2PasswordRequestForm = Depends() ):
     
-    user_exist = UserNode.match(user_credentials.username)
+    user_exist = UserNode.match(user_credentiel.username)
 
     if user_exist:
 
         try:
              
-             password = hash_helper.verify(user_credentials.password, user_exist.password)
+             password = hash_helper.verify(user_credentiel.password, user_exist.password)
 
         except PyJWTError as e:
             print(f"Exception {e}")
@@ -49,7 +50,7 @@ def user_get_token(user_credentials: UserSignIn = Body(...) ):
 
        
         if password:
-            return sign_jwt(email=user_credentials.username)
+            return sign_jwt(email=user_credentiel.username)
         
         raise HTTPException(status_code=403, detail="Incorrect email or password")
     
