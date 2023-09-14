@@ -24,17 +24,17 @@ To use the application, follow the outlined steps:
     ```
 
 
-  5. You also need to start your NEO4J instance locally or on Docker and create a `.env.dev` file. See the `.env.sample` for configurations. 
+  4. You also need to start your NEO4J instance locally or on Docker and create a `.env.dev` file. See the `.env.sample` for configurations. 
 
     Example for running locally NEO4J at port 7474:
     ```console
     cp .env.sample .env.dev
     ```
 
-  4. Start the application:
+  5. Start the application:
 
       ```console
-      python main.py
+      python3 main.py
       ```
 
 
