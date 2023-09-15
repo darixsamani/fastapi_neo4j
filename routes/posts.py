@@ -12,7 +12,7 @@ from datetime import datetime
 
 PostRouter = APIRouter()
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/login")
 
 def get_current_user(request: Request):
     pass
