@@ -9,6 +9,9 @@ from auth.jwt_handler import sign_jwt
 import logging
 from passlib.context import CryptContext
 from jwt import PyJWTError
+from auth.deps import get_current_user
+from uuid import UUID
+
 UserRouter = APIRouter()
 
 
@@ -58,5 +61,13 @@ def user_get_token(user_credentiel: OAuth2PasswordRequestForm = Depends() ):
         raise HTTPException(status_code=403, detail="Incorrect email or password")
     
     raise HTTPException(status_code=403, detail="Incorrect email or password")
+@UserRouter.delete("/{user_uuid}")
+def delete_user(user_uuid: UUID, user: UserNode = Depends(get_current_user)):
+
+    if user.id != user_uuid:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Please provider a valid UUID_USER")
     
+    UserNode.delete(user.email)
+    return HTTPException(status_code=status.HTTP_200_OK, detail=f"User with {user_uuid} was succefull delete")
+
 
