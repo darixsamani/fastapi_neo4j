@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Body, status, Depends
 from fastapi.exceptions import HTTPException
 from models.user import UserNode
-from schemas.users import UserCreate
+from schemas.users import UserCreate, UserUpdate
 from database.database import initiate_database
 from schemas.users import UserSignIn, Token
 from fastapi.security import OAuth2PasswordRequestForm
@@ -64,10 +64,26 @@ def user_get_token(user_credentiel: OAuth2PasswordRequestForm = Depends() ):
 @UserRouter.delete("/{user_uuid}")
 def delete_user(user_uuid: UUID, user: UserNode = Depends(get_current_user)):
 
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="The user does not exist")
+    
     if user.id != user_uuid:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Please provider a valid UUID_USER")
     
     UserNode.delete(user.email)
     return HTTPException(status_code=status.HTTP_200_OK, detail=f"User with {user_uuid} was succefull delete")
 
+@UserRouter.put("/{user_uuid}")
+def update_user_information(user_uuid: UUID, user_update : UserUpdate, user: UserNode = Depends(get_current_user)):
+
+    if not user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="The user does not exist")
+    
+    if user.id != user_uuid:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Please provider a valid UUID_USER")
+
+    user.password = hash_helper.encrypt(user_update.password)
+    user.fullname = user_update.fullname
+    user.merge()
+    return HTTPException(status_code=status.HTTP_200_OK, detail=f"User with {user_uuid} was updating")
 
