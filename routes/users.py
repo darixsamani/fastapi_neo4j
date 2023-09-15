@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Body, status, Depends
 from fastapi.exceptions import HTTPException
 from models.user import UserNode
+from schemas.users import UserCreate
 from database.database import initiate_database
 from schemas.users import UserSignIn, Token
 from fastapi.security import OAuth2PasswordRequestForm
@@ -15,18 +16,20 @@ hash_helper = CryptContext(schemes=["bcrypt"])
 
 
 @UserRouter.post("")
-def add_new_user(user: UserNode):
-    user_exists = user.match(user.email)
+def add_new_user(user: UserCreate):
+
+    user_exists = UserNode.match(user.email)
     if user_exists:
         raise HTTPException(
             status_code=409, detail="User with email supplied already exists"
         )
-    user.password = hash_helper.encrypt(user.password)
-    user.create()
+    
+    user_create = UserNode(email=user.email, fullname=user.fullname, password=hash_helper.encrypt(user.password))
+    user_create.create()
     return HTTPException(status_code=status.HTTP_201_CREATED, detail="user successfully created")
 
 
-@UserRouter.post("/token")
+@UserRouter.post("/login")
 def user_get_token(user_credentiel: OAuth2PasswordRequestForm = Depends() ):
     
     user_exist = UserNode.match(user_credentiel.username)
