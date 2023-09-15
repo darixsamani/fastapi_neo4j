@@ -9,4 +9,8 @@ class PostCreate(BaseModel):
     tags: List[str]
 
 
+class PostUpdate(PostCreate):
+    pass
+
+
     
