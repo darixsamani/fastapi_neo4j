@@ -6,13 +6,13 @@ from datetime import datetime
 from .user import UserNode
 from typing import List
 from pydantic import Field
-import uuid
+from uuid import UUID, uuid4
 
 class PosteNode(BaseNode):
     __primarylabel__: ClassVar[str] = "Poste"
     __primaryproperty__: ClassVar[str] = "id"
     
-    id: str = Field(default_factory= lambda: str(uuid.uuid4()))
+    id: UUID = Field(default_factory=uuid4)
     title: str
     content: str
     date_created : datetime = datetime.now()
