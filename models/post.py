@@ -12,7 +12,7 @@ class PosteNode(BaseNode):
     __primarylabel__: ClassVar[str] = "Poste"
     __primaryproperty__: ClassVar[str] = "id"
     
-    id: UUID = Field(default_factory=uuid4)
+    id: str = Field(default_factory=uuid4)
     title: str
     content: str
     date_created : datetime = datetime.now()

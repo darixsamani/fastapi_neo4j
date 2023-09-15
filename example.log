@@ -3938,3 +3938,1391 @@ DEBUG: 2023-09-14 19:51:43,349: _bolt4.py: _on_server_state_change: _bolt4: [#C1
 DEBUG: 2023-09-14 19:51:43,349: _bolt4.py: fetch_message: _bolt4: [#C1A6]  S: RECORD * 1
 DEBUG: 2023-09-14 19:51:43,350: _bolt4.py: fetch_message: _bolt4: [#C1A6]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDKQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
 DEBUG: 2023-09-14 19:51:43,350: _bolt4.py: _on_server_state_change: _bolt4: [#C1A6]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:09:36,623: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:09:36,673: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:09:36,698: _socket.py: _handshake: _socket: [#DAC4]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:09:36,698: _socket.py: _handshake: _socket: [#DAC4]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:09:36,699: _socket.py: _handshake: _socket: [#DAC4]  S: <CLOSE>
+DEBUG: 2023-09-15 18:09:36,699: _socket.py: connect: _socket: [#0000]  C: <CONNECTION FAILED> ServiceUnavailable: Connection to 127.0.0.1:7687 closed without handshake response
+DEBUG: 2023-09-15 18:11:33,365: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:11:33,369: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:11:33,375: _socket.py: _handshake: _socket: [#B24C]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:11:33,375: _socket.py: _handshake: _socket: [#B24C]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:11:33,380: _socket.py: _handshake: _socket: [#B24C]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:11:33,380: _bolt4.py: hello: _bolt4: [#B24C]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:11:33,412: _bolt4.py: fetch_message: _bolt4: [#B24C]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-35', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:11:33,412: _bolt4.py: _on_server_state_change: _bolt4: [#B24C]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:11:33,412: _bolt4.py: run: _bolt4: [#B24C]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:11:33,413: _bolt4.py: pull: _bolt4: [#B24C]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:11:33,464: _bolt4.py: fetch_message: _bolt4: [#B24C]  S: SUCCESS {'t_first': 48, 'fields': ['x']}
+DEBUG: 2023-09-15 18:11:33,464: _bolt4.py: _on_server_state_change: _bolt4: [#B24C]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:11:33,470: _bolt4.py: fetch_message: _bolt4: [#B24C]  S: RECORD * 1
+DEBUG: 2023-09-15 18:11:33,471: _bolt4.py: fetch_message: _bolt4: [#B24C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDKQ', 'type': 'r', 't_last': 3, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:11:33,471: _bolt4.py: _on_server_state_change: _bolt4: [#B24C]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:13:21,172: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:13:21,174: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:13:21,177: _socket.py: _handshake: _socket: [#9E4C]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:13:21,177: _socket.py: _handshake: _socket: [#9E4C]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:13:21,179: _socket.py: _handshake: _socket: [#9E4C]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:13:21,180: _bolt4.py: hello: _bolt4: [#9E4C]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:13:21,188: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-65', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:13:21,189: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:13:21,189: _bolt4.py: run: _bolt4: [#9E4C]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:13:21,189: _bolt4.py: pull: _bolt4: [#9E4C]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:13:21,204: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'t_first': 12, 'fields': ['x']}
+DEBUG: 2023-09-15 18:13:21,205: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:13:21,207: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: RECORD * 1
+DEBUG: 2023-09-15 18:13:21,208: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDOQ', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:13:21,208: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:13:23,091: _bolt4.py: begin: _bolt4: [#9E4C]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:13:23,094: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:13:23,094: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:13:23,095: _bolt4.py: run: _bolt4: [#9E4C]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:13:23,095: _bolt4.py: pull: _bolt4: [#9E4C]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:13:23,230: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'t_first': 131, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:13:23,233: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:13:23,233: _bolt4.py: commit: _bolt4: [#9E4C]  C: COMMIT
+DEBUG: 2023-09-15 18:13:23,242: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDOQ'}
+DEBUG: 2023-09-15 18:13:23,242: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:13:23,251: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 18:13:23,287: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 18:13:23,783: _bolt4.py: begin: _bolt4: [#9E4C]  C: BEGIN {}
+DEBUG: 2023-09-15 18:13:23,786: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:13:23,786: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:13:23,788: _bolt4.py: run: _bolt4: [#9E4C]  C: RUN '\n        CREATE (n:User { email: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': 'user@example.com', 'all_props': {'created': Structure[0x64](1694801603, 778743000), 'merged': Structure[0x64](1694801603, 778743000), 'id': '56d5310d-84b3-4ad2-a0f1-3a08611540cf', 'password': '$2b$12$FALzpD.0Uncc./acobpr2u7gSfaKJ6JLu465FJE8YrTCbDW3L0Vhm', 'fullname': 'string'}} {}
+DEBUG: 2023-09-15 18:13:23,789: _bolt4.py: pull: _bolt4: [#9E4C]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:13:23,918: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'t_first': 125, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:13:24,520: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: RECORD * 1
+DEBUG: 2023-09-15 18:13:24,521: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 6}, 'type': 'rw', 't_last': 603, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:13:24,521: _bolt4.py: commit: _bolt4: [#9E4C]  C: COMMIT
+DEBUG: 2023-09-15 18:13:24,565: _bolt4.py: fetch_message: _bolt4: [#9E4C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDSQ'}
+DEBUG: 2023-09-15 18:13:24,565: _bolt4.py: _on_server_state_change: _bolt4: [#9E4C]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:14:37,165: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:14:37,169: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:14:37,172: _socket.py: _handshake: _socket: [#D79C]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:14:37,173: _socket.py: _handshake: _socket: [#D79C]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:14:37,175: _socket.py: _handshake: _socket: [#D79C]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:14:37,176: _bolt4.py: hello: _bolt4: [#D79C]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:14:37,184: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-86', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:14:37,185: _bolt4.py: _on_server_state_change: _bolt4: [#D79C]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:14:37,186: _bolt4.py: run: _bolt4: [#D79C]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:14:37,186: _bolt4.py: pull: _bolt4: [#D79C]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:14:37,192: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {'t_first': 4, 'fields': ['x']}
+DEBUG: 2023-09-15 18:14:37,192: _bolt4.py: _on_server_state_change: _bolt4: [#D79C]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:14:37,194: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: RECORD * 1
+DEBUG: 2023-09-15 18:14:37,195: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDSQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:14:37,195: _bolt4.py: _on_server_state_change: _bolt4: [#D79C]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:15:08,053: _bolt4.py: begin: _bolt4: [#D79C]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:15:08,056: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:15:08,057: _bolt4.py: _on_server_state_change: _bolt4: [#D79C]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:15:08,058: _bolt4.py: run: _bolt4: [#D79C]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:15:08,059: _bolt4.py: pull: _bolt4: [#D79C]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:15:08,153: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {'t_first': 92, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:15:08,155: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: RECORD * 1
+DEBUG: 2023-09-15 18:15:08,156: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:15:08,156: _bolt4.py: commit: _bolt4: [#D79C]  C: COMMIT
+DEBUG: 2023-09-15 18:15:08,159: _bolt4.py: fetch_message: _bolt4: [#D79C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDSQ'}
+DEBUG: 2023-09-15 18:15:08,160: _bolt4.py: _on_server_state_change: _bolt4: [#D79C]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:17:41,229: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:17:41,231: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:17:41,235: _socket.py: _handshake: _socket: [#A5FA]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:17:41,235: _socket.py: _handshake: _socket: [#A5FA]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:17:41,236: _socket.py: _handshake: _socket: [#A5FA]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:17:41,237: _bolt4.py: hello: _bolt4: [#A5FA]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:17:41,246: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-111', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:17:41,246: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:17:41,247: _bolt4.py: run: _bolt4: [#A5FA]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:17:41,248: _bolt4.py: pull: _bolt4: [#A5FA]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:17:41,252: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:17:41,252: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:17:41,256: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: RECORD * 1
+DEBUG: 2023-09-15 18:17:41,257: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDSQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:17:41,257: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:17:49,533: _bolt4.py: begin: _bolt4: [#A5FA]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:17:49,535: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:17:49,536: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:17:49,537: _bolt4.py: run: _bolt4: [#A5FA]  C: RUN '\n        MATCH (n:User)\n        WHERE n.id = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:17:49,538: _bolt4.py: pull: _bolt4: [#A5FA]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:17:49,625: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'t_first': 85, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:17:49,629: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:17:49,630: _bolt4.py: commit: _bolt4: [#A5FA]  C: COMMIT
+DEBUG: 2023-09-15 18:17:49,632: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDSQ'}
+DEBUG: 2023-09-15 18:17:49,632: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:17:49,637: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 18:17:49,640: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 18:17:50,129: _bolt4.py: begin: _bolt4: [#A5FA]  C: BEGIN {}
+DEBUG: 2023-09-15 18:17:50,130: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:17:50,130: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:17:50,133: _bolt4.py: run: _bolt4: [#A5FA]  C: RUN '\n        CREATE (n:User { id: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': 'ed2671a3-7c28-4e9d-bb7a-9abf56a07716', 'all_props': {'created': Structure[0x64](1694801870, 125690000), 'merged': Structure[0x64](1694801870, 125690000), 'email': 'user@example.com', 'password': '$2b$12$RjCH4rFy0rSsTpPXS66aUOyThGoWhLjKQ3NAKmFeWzm81nLcOAKee', 'fullname': 'string'}} {}
+DEBUG: 2023-09-15 18:17:50,133: _bolt4.py: pull: _bolt4: [#A5FA]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:17:50,193: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'t_first': 57, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:17:50,195: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: RECORD * 1
+DEBUG: 2023-09-15 18:17:50,197: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 6}, 'type': 'rw', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:17:50,198: _bolt4.py: commit: _bolt4: [#A5FA]  C: COMMIT
+DEBUG: 2023-09-15 18:17:50,230: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDWQ'}
+DEBUG: 2023-09-15 18:17:50,231: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:17:59,491: _bolt4.py: begin: _bolt4: [#A5FA]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:17:59,494: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:17:59,494: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:17:59,495: _bolt4.py: run: _bolt4: [#A5FA]  C: RUN '\n        MATCH (n:User)\n        WHERE n.id = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:17:59,495: _bolt4.py: pull: _bolt4: [#A5FA]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:17:59,504: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:17:59,504: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:17:59,505: _bolt4.py: commit: _bolt4: [#A5FA]  C: COMMIT
+DEBUG: 2023-09-15 18:17:59,507: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDWQ'}
+DEBUG: 2023-09-15 18:17:59,508: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:17:59,960: _bolt4.py: begin: _bolt4: [#A5FA]  C: BEGIN {}
+DEBUG: 2023-09-15 18:17:59,962: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:17:59,962: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:17:59,963: _bolt4.py: run: _bolt4: [#A5FA]  C: RUN '\n        CREATE (n:User { id: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': '769cf823-db00-463d-a68b-92f7b39350f3', 'all_props': {'created': Structure[0x64](1694801879, 958364000), 'merged': Structure[0x64](1694801879, 958364000), 'email': 'user@example.com', 'password': '$2b$12$M33gvQMDs75pOOcc5PZIsuVEqtfqY6vkLQ.8FT8taRb18AyJlXUlG', 'fullname': 'string'}} {}
+DEBUG: 2023-09-15 18:17:59,963: _bolt4.py: pull: _bolt4: [#A5FA]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:17:59,967: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:17:59,970: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: RECORD * 1
+DEBUG: 2023-09-15 18:17:59,971: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 6}, 'type': 'rw', 't_last': 3, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:17:59,971: _bolt4.py: commit: _bolt4: [#A5FA]  C: COMMIT
+DEBUG: 2023-09-15 18:17:59,992: _bolt4.py: fetch_message: _bolt4: [#A5FA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDaQ'}
+DEBUG: 2023-09-15 18:17:59,992: _bolt4.py: _on_server_state_change: _bolt4: [#A5FA]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:18:33,033: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:18:33,035: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:18:33,041: _socket.py: _handshake: _socket: [#BA36]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:18:33,042: _socket.py: _handshake: _socket: [#BA36]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:18:33,044: _socket.py: _handshake: _socket: [#BA36]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:18:33,045: _bolt4.py: hello: _bolt4: [#BA36]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:18:33,050: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-124', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:18:33,050: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:18:33,051: _bolt4.py: run: _bolt4: [#BA36]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:18:33,051: _bolt4.py: pull: _bolt4: [#BA36]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:18:33,057: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'t_first': 3, 'fields': ['x']}
+DEBUG: 2023-09-15 18:18:33,058: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:18:33,059: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: RECORD * 1
+DEBUG: 2023-09-15 18:18:33,059: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDaQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:18:33,060: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:18:57,240: _bolt4.py: begin: _bolt4: [#BA36]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:18:57,242: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:18:57,242: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:18:57,242: _bolt4.py: run: _bolt4: [#BA36]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:18:57,242: _bolt4.py: pull: _bolt4: [#BA36]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:18:57,289: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'t_first': 45, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:18:57,296: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:18:57,296: _bolt4.py: commit: _bolt4: [#BA36]  C: COMMIT
+DEBUG: 2023-09-15 18:18:57,298: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDeQ'}
+DEBUG: 2023-09-15 18:18:57,298: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:18:57,302: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 18:18:57,304: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 18:18:57,778: _bolt4.py: begin: _bolt4: [#BA36]  C: BEGIN {}
+DEBUG: 2023-09-15 18:18:57,779: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:18:57,780: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:18:57,782: _bolt4.py: run: _bolt4: [#BA36]  C: RUN '\n        CREATE (n:User { email: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': 'user@example.com', 'all_props': {'created': Structure[0x64](1694801937, 774716000), 'merged': Structure[0x64](1694801937, 774716000), 'id': 'bfc9124a-e8d6-4bfe-9e66-7ba413142456', 'password': '$2b$12$ZZ6j/DS3NDF83uqcR.gd3OrhtSS39SqgPwsNZqQxkJP5rAQm6fVoW', 'fullname': 'string'}} {}
+DEBUG: 2023-09-15 18:18:57,783: _bolt4.py: pull: _bolt4: [#BA36]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:18:57,787: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'t_first': 3, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:18:57,793: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: RECORD * 1
+DEBUG: 2023-09-15 18:18:57,794: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 6}, 'type': 'rw', 't_last': 5, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:18:57,795: _bolt4.py: commit: _bolt4: [#BA36]  C: COMMIT
+DEBUG: 2023-09-15 18:18:57,826: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ'}
+DEBUG: 2023-09-15 18:18:57,826: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:18:59,108: _bolt4.py: begin: _bolt4: [#BA36]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:18:59,110: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:18:59,110: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:18:59,111: _bolt4.py: run: _bolt4: [#BA36]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:18:59,111: _bolt4.py: pull: _bolt4: [#BA36]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:18:59,137: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'t_first': 3, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:18:59,138: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: RECORD * 1
+DEBUG: 2023-09-15 18:18:59,140: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:18:59,143: _bolt4.py: commit: _bolt4: [#BA36]  C: COMMIT
+DEBUG: 2023-09-15 18:18:59,146: _bolt4.py: fetch_message: _bolt4: [#BA36]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ'}
+DEBUG: 2023-09-15 18:18:59,147: _bolt4.py: _on_server_state_change: _bolt4: [#BA36]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:22:56,170: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:22:56,172: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:22:56,177: _socket.py: _handshake: _socket: [#E0E4]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:22:56,178: _socket.py: _handshake: _socket: [#E0E4]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:22:56,179: _socket.py: _handshake: _socket: [#E0E4]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:22:56,179: _bolt4.py: hello: _bolt4: [#E0E4]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:22:56,185: _bolt4.py: fetch_message: _bolt4: [#E0E4]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-157', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:22:56,185: _bolt4.py: _on_server_state_change: _bolt4: [#E0E4]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:22:56,186: _bolt4.py: run: _bolt4: [#E0E4]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:22:56,186: _bolt4.py: pull: _bolt4: [#E0E4]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:22:56,190: _bolt4.py: fetch_message: _bolt4: [#E0E4]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:22:56,190: _bolt4.py: _on_server_state_change: _bolt4: [#E0E4]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:22:56,190: _bolt4.py: fetch_message: _bolt4: [#E0E4]  S: RECORD * 1
+DEBUG: 2023-09-15 18:22:56,191: _bolt4.py: fetch_message: _bolt4: [#E0E4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:22:56,191: _bolt4.py: _on_server_state_change: _bolt4: [#E0E4]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:23:03,428: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:23:03,430: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:23:03,433: _socket.py: _handshake: _socket: [#C3E0]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:23:03,433: _socket.py: _handshake: _socket: [#C3E0]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:23:03,435: _socket.py: _handshake: _socket: [#C3E0]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:23:03,435: _bolt4.py: hello: _bolt4: [#C3E0]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:23:03,441: _bolt4.py: fetch_message: _bolt4: [#C3E0]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-158', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:23:03,441: _bolt4.py: _on_server_state_change: _bolt4: [#C3E0]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:23:03,442: _bolt4.py: run: _bolt4: [#C3E0]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:23:03,442: _bolt4.py: pull: _bolt4: [#C3E0]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:23:03,445: _bolt4.py: fetch_message: _bolt4: [#C3E0]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:23:03,445: _bolt4.py: _on_server_state_change: _bolt4: [#C3E0]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:23:03,446: _bolt4.py: fetch_message: _bolt4: [#C3E0]  S: RECORD * 1
+DEBUG: 2023-09-15 18:23:03,447: _bolt4.py: fetch_message: _bolt4: [#C3E0]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:23:03,447: _bolt4.py: _on_server_state_change: _bolt4: [#C3E0]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:25:27,680: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:25:27,682: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:25:27,686: _socket.py: _handshake: _socket: [#C56C]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:25:27,686: _socket.py: _handshake: _socket: [#C56C]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:25:27,689: _socket.py: _handshake: _socket: [#C56C]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:25:27,691: _bolt4.py: hello: _bolt4: [#C56C]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:25:27,712: _bolt4.py: fetch_message: _bolt4: [#C56C]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-171', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:25:27,713: _bolt4.py: _on_server_state_change: _bolt4: [#C56C]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:25:27,713: _bolt4.py: run: _bolt4: [#C56C]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:25:27,713: _bolt4.py: pull: _bolt4: [#C56C]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:25:27,716: _bolt4.py: fetch_message: _bolt4: [#C56C]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:25:27,717: _bolt4.py: _on_server_state_change: _bolt4: [#C56C]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:25:27,718: _bolt4.py: fetch_message: _bolt4: [#C56C]  S: RECORD * 1
+DEBUG: 2023-09-15 18:25:27,719: _bolt4.py: fetch_message: _bolt4: [#C56C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:25:27,719: _bolt4.py: _on_server_state_change: _bolt4: [#C56C]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:26:19,857: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:26:19,858: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:26:19,861: _socket.py: _handshake: _socket: [#ED56]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:26:19,861: _socket.py: _handshake: _socket: [#ED56]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:26:19,863: _socket.py: _handshake: _socket: [#ED56]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:26:19,863: _bolt4.py: hello: _bolt4: [#ED56]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:26:19,869: _bolt4.py: fetch_message: _bolt4: [#ED56]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-172', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:26:19,869: _bolt4.py: _on_server_state_change: _bolt4: [#ED56]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:26:19,870: _bolt4.py: run: _bolt4: [#ED56]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:26:19,870: _bolt4.py: pull: _bolt4: [#ED56]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:26:19,873: _bolt4.py: fetch_message: _bolt4: [#ED56]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:26:19,874: _bolt4.py: _on_server_state_change: _bolt4: [#ED56]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:26:19,875: _bolt4.py: fetch_message: _bolt4: [#ED56]  S: RECORD * 1
+DEBUG: 2023-09-15 18:26:19,875: _bolt4.py: fetch_message: _bolt4: [#ED56]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:26:19,875: _bolt4.py: _on_server_state_change: _bolt4: [#ED56]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:27:19,193: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:27:19,198: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:27:19,202: _socket.py: _handshake: _socket: [#9AA2]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:27:19,202: _socket.py: _handshake: _socket: [#9AA2]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:27:19,203: _socket.py: _handshake: _socket: [#9AA2]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:27:19,204: _bolt4.py: hello: _bolt4: [#9AA2]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:27:19,209: _bolt4.py: fetch_message: _bolt4: [#9AA2]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-177', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:27:19,212: _bolt4.py: _on_server_state_change: _bolt4: [#9AA2]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:27:19,213: _bolt4.py: run: _bolt4: [#9AA2]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:27:19,213: _bolt4.py: pull: _bolt4: [#9AA2]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:27:19,218: _bolt4.py: fetch_message: _bolt4: [#9AA2]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:27:19,218: _bolt4.py: _on_server_state_change: _bolt4: [#9AA2]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:27:19,219: _bolt4.py: fetch_message: _bolt4: [#9AA2]  S: RECORD * 1
+DEBUG: 2023-09-15 18:27:19,220: _bolt4.py: fetch_message: _bolt4: [#9AA2]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:27:19,220: _bolt4.py: _on_server_state_change: _bolt4: [#9AA2]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:28:09,315: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:28:09,317: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:28:09,322: _socket.py: _handshake: _socket: [#C3FE]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:28:09,322: _socket.py: _handshake: _socket: [#C3FE]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:28:09,324: _socket.py: _handshake: _socket: [#C3FE]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:28:09,324: _bolt4.py: hello: _bolt4: [#C3FE]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:28:09,330: _bolt4.py: fetch_message: _bolt4: [#C3FE]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-182', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:28:09,330: _bolt4.py: _on_server_state_change: _bolt4: [#C3FE]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:28:09,330: _bolt4.py: run: _bolt4: [#C3FE]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:28:09,331: _bolt4.py: pull: _bolt4: [#C3FE]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:28:09,341: _bolt4.py: fetch_message: _bolt4: [#C3FE]  S: SUCCESS {'t_first': 7, 'fields': ['x']}
+DEBUG: 2023-09-15 18:28:09,342: _bolt4.py: _on_server_state_change: _bolt4: [#C3FE]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:28:09,342: _bolt4.py: fetch_message: _bolt4: [#C3FE]  S: RECORD * 1
+DEBUG: 2023-09-15 18:28:09,342: _bolt4.py: fetch_message: _bolt4: [#C3FE]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:28:09,342: _bolt4.py: _on_server_state_change: _bolt4: [#C3FE]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:29:30,122: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:29:30,125: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:29:30,128: _socket.py: _handshake: _socket: [#9258]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:29:30,128: _socket.py: _handshake: _socket: [#9258]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:29:30,130: _socket.py: _handshake: _socket: [#9258]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:29:30,130: _bolt4.py: hello: _bolt4: [#9258]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:29:30,141: _bolt4.py: fetch_message: _bolt4: [#9258]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-191', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:29:30,142: _bolt4.py: _on_server_state_change: _bolt4: [#9258]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:29:30,143: _bolt4.py: run: _bolt4: [#9258]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:29:30,143: _bolt4.py: pull: _bolt4: [#9258]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:29:30,147: _bolt4.py: fetch_message: _bolt4: [#9258]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:29:30,148: _bolt4.py: _on_server_state_change: _bolt4: [#9258]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:29:30,148: _bolt4.py: fetch_message: _bolt4: [#9258]  S: RECORD * 1
+DEBUG: 2023-09-15 18:29:30,148: _bolt4.py: fetch_message: _bolt4: [#9258]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:29:30,148: _bolt4.py: _on_server_state_change: _bolt4: [#9258]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:33:24,184: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:33:24,187: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:33:24,192: _socket.py: _handshake: _socket: [#A200]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:33:24,192: _socket.py: _handshake: _socket: [#A200]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:33:24,194: _socket.py: _handshake: _socket: [#A200]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:33:24,194: _bolt4.py: hello: _bolt4: [#A200]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:33:24,200: _bolt4.py: fetch_message: _bolt4: [#A200]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-208', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:33:24,201: _bolt4.py: _on_server_state_change: _bolt4: [#A200]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:33:24,201: _bolt4.py: run: _bolt4: [#A200]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:33:24,201: _bolt4.py: pull: _bolt4: [#A200]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:33:24,205: _bolt4.py: fetch_message: _bolt4: [#A200]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:33:24,205: _bolt4.py: _on_server_state_change: _bolt4: [#A200]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:33:24,207: _bolt4.py: fetch_message: _bolt4: [#A200]  S: RECORD * 1
+DEBUG: 2023-09-15 18:33:24,207: _bolt4.py: fetch_message: _bolt4: [#A200]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:33:24,208: _bolt4.py: _on_server_state_change: _bolt4: [#A200]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:33:44,676: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:33:44,678: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:33:44,682: _socket.py: _handshake: _socket: [#A146]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:33:44,682: _socket.py: _handshake: _socket: [#A146]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:33:44,683: _socket.py: _handshake: _socket: [#A146]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:33:44,684: _bolt4.py: hello: _bolt4: [#A146]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:33:44,690: _bolt4.py: fetch_message: _bolt4: [#A146]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-209', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:33:44,690: _bolt4.py: _on_server_state_change: _bolt4: [#A146]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:33:44,690: _bolt4.py: run: _bolt4: [#A146]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:33:44,691: _bolt4.py: pull: _bolt4: [#A146]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:33:44,700: _bolt4.py: fetch_message: _bolt4: [#A146]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:33:44,700: _bolt4.py: _on_server_state_change: _bolt4: [#A146]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:33:44,700: _bolt4.py: fetch_message: _bolt4: [#A146]  S: RECORD * 1
+DEBUG: 2023-09-15 18:33:44,701: _bolt4.py: fetch_message: _bolt4: [#A146]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:33:44,701: _bolt4.py: _on_server_state_change: _bolt4: [#A146]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:35:20,733: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:35:20,736: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:35:20,740: _socket.py: _handshake: _socket: [#EA82]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:35:20,740: _socket.py: _handshake: _socket: [#EA82]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:35:20,741: _socket.py: _handshake: _socket: [#EA82]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:35:20,742: _bolt4.py: hello: _bolt4: [#EA82]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:35:20,746: _bolt4.py: fetch_message: _bolt4: [#EA82]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-214', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:35:20,746: _bolt4.py: _on_server_state_change: _bolt4: [#EA82]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:35:20,746: _bolt4.py: run: _bolt4: [#EA82]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:35:20,746: _bolt4.py: pull: _bolt4: [#EA82]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:35:20,751: _bolt4.py: fetch_message: _bolt4: [#EA82]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:35:20,751: _bolt4.py: _on_server_state_change: _bolt4: [#EA82]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:35:20,751: _bolt4.py: fetch_message: _bolt4: [#EA82]  S: RECORD * 1
+DEBUG: 2023-09-15 18:35:20,752: _bolt4.py: fetch_message: _bolt4: [#EA82]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:35:20,752: _bolt4.py: _on_server_state_change: _bolt4: [#EA82]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:35:45,838: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:35:45,840: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:35:45,843: _socket.py: _handshake: _socket: [#C6A0]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:35:45,843: _socket.py: _handshake: _socket: [#C6A0]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:35:45,845: _socket.py: _handshake: _socket: [#C6A0]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:35:45,846: _bolt4.py: hello: _bolt4: [#C6A0]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:35:45,854: _bolt4.py: fetch_message: _bolt4: [#C6A0]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-219', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:35:45,855: _bolt4.py: _on_server_state_change: _bolt4: [#C6A0]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:35:45,856: _bolt4.py: run: _bolt4: [#C6A0]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:35:45,856: _bolt4.py: pull: _bolt4: [#C6A0]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:35:45,860: _bolt4.py: fetch_message: _bolt4: [#C6A0]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:35:45,860: _bolt4.py: _on_server_state_change: _bolt4: [#C6A0]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:35:45,861: _bolt4.py: fetch_message: _bolt4: [#C6A0]  S: RECORD * 1
+DEBUG: 2023-09-15 18:35:45,862: _bolt4.py: fetch_message: _bolt4: [#C6A0]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:35:45,863: _bolt4.py: _on_server_state_change: _bolt4: [#C6A0]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:37:16,479: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:37:16,481: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:37:16,486: _socket.py: _handshake: _socket: [#8270]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:37:16,487: _socket.py: _handshake: _socket: [#8270]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:37:16,489: _socket.py: _handshake: _socket: [#8270]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:37:16,489: _bolt4.py: hello: _bolt4: [#8270]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:37:16,495: _bolt4.py: fetch_message: _bolt4: [#8270]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-240', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:37:16,496: _bolt4.py: _on_server_state_change: _bolt4: [#8270]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:37:16,496: _bolt4.py: run: _bolt4: [#8270]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:37:16,497: _bolt4.py: pull: _bolt4: [#8270]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:37:16,501: _bolt4.py: fetch_message: _bolt4: [#8270]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:37:16,501: _bolt4.py: _on_server_state_change: _bolt4: [#8270]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:37:16,502: _bolt4.py: fetch_message: _bolt4: [#8270]  S: RECORD * 1
+DEBUG: 2023-09-15 18:37:16,503: _bolt4.py: fetch_message: _bolt4: [#8270]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:37:16,504: _bolt4.py: _on_server_state_change: _bolt4: [#8270]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:37:41,904: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:37:41,906: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:37:41,909: _socket.py: _handshake: _socket: [#B382]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:37:41,910: _socket.py: _handshake: _socket: [#B382]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:37:41,911: _socket.py: _handshake: _socket: [#B382]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:37:41,912: _bolt4.py: hello: _bolt4: [#B382]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:37:41,919: _bolt4.py: fetch_message: _bolt4: [#B382]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-245', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:37:41,919: _bolt4.py: _on_server_state_change: _bolt4: [#B382]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:37:41,920: _bolt4.py: run: _bolt4: [#B382]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:37:41,920: _bolt4.py: pull: _bolt4: [#B382]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:37:41,928: _bolt4.py: fetch_message: _bolt4: [#B382]  S: SUCCESS {'t_first': 4, 'fields': ['x']}
+DEBUG: 2023-09-15 18:37:41,928: _bolt4.py: _on_server_state_change: _bolt4: [#B382]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:37:41,928: _bolt4.py: fetch_message: _bolt4: [#B382]  S: RECORD * 1
+DEBUG: 2023-09-15 18:37:41,929: _bolt4.py: fetch_message: _bolt4: [#B382]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:37:41,929: _bolt4.py: _on_server_state_change: _bolt4: [#B382]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:38:25,936: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:38:25,938: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:38:25,941: _socket.py: _handshake: _socket: [#D526]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:38:25,942: _socket.py: _handshake: _socket: [#D526]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:38:25,944: _socket.py: _handshake: _socket: [#D526]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:38:25,945: _bolt4.py: hello: _bolt4: [#D526]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:38:25,951: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-250', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:38:25,951: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:38:25,951: _bolt4.py: run: _bolt4: [#D526]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:38:25,952: _bolt4.py: pull: _bolt4: [#D526]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:38:25,954: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:38:25,955: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:38:25,956: _bolt4.py: fetch_message: _bolt4: [#D526]  S: RECORD * 1
+DEBUG: 2023-09-15 18:38:25,956: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:38:25,956: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:38:47,111: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_name with data[0:10]
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_data with data[11:19]
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_name with data[20:28]
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_data with data[29:47]
+DEBUG: 2023-09-15 18:38:47,112: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 18:38:47,113: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 18:38:47,113: multipart.py: callback: multipart: Calling on_field_name with data[48:56]
+DEBUG: 2023-09-15 18:38:47,113: multipart.py: callback: multipart: Calling on_field_data with data[57:63]
+DEBUG: 2023-09-15 18:38:47,114: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 18:38:47,114: multipart.py: callback: multipart: Calling on_end with no data
+DEBUG: 2023-09-15 18:38:47,123: _bolt4.py: begin: _bolt4: [#D526]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:38:47,124: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:38:47,124: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:38:47,125: _bolt4.py: run: _bolt4: [#D526]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:38:47,125: _bolt4.py: pull: _bolt4: [#D526]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:38:47,177: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'t_first': 50, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:38:47,181: _bolt4.py: fetch_message: _bolt4: [#D526]  S: RECORD * 1
+DEBUG: 2023-09-15 18:38:47,181: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:38:47,181: _bolt4.py: commit: _bolt4: [#D526]  C: COMMIT
+DEBUG: 2023-09-15 18:38:47,184: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ'}
+DEBUG: 2023-09-15 18:38:47,184: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:38:47,199: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 18:38:47,201: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 18:39:09,446: _bolt4.py: begin: _bolt4: [#D526]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:39:09,452: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:39:09,452: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:39:09,453: _bolt4.py: run: _bolt4: [#D526]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:39:09,453: _bolt4.py: pull: _bolt4: [#D526]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:39:09,466: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:39:09,468: _bolt4.py: fetch_message: _bolt4: [#D526]  S: RECORD * 1
+DEBUG: 2023-09-15 18:39:09,469: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:39:09,470: _bolt4.py: commit: _bolt4: [#D526]  C: COMMIT
+DEBUG: 2023-09-15 18:39:09,480: _bolt4.py: fetch_message: _bolt4: [#D526]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ'}
+DEBUG: 2023-09-15 18:39:09,481: _bolt4.py: _on_server_state_change: _bolt4: [#D526]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:39:52,092: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:39:52,094: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:39:52,097: _socket.py: _handshake: _socket: [#C574]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:39:52,097: _socket.py: _handshake: _socket: [#C574]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:39:52,100: _socket.py: _handshake: _socket: [#C574]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:39:52,101: _bolt4.py: hello: _bolt4: [#C574]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:39:52,106: _bolt4.py: fetch_message: _bolt4: [#C574]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-263', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:39:52,106: _bolt4.py: _on_server_state_change: _bolt4: [#C574]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:39:52,107: _bolt4.py: run: _bolt4: [#C574]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:39:52,107: _bolt4.py: pull: _bolt4: [#C574]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:39:52,109: _bolt4.py: fetch_message: _bolt4: [#C574]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:39:52,110: _bolt4.py: _on_server_state_change: _bolt4: [#C574]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:39:52,114: _bolt4.py: fetch_message: _bolt4: [#C574]  S: RECORD * 1
+DEBUG: 2023-09-15 18:39:52,114: _bolt4.py: fetch_message: _bolt4: [#C574]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:39:52,114: _bolt4.py: _on_server_state_change: _bolt4: [#C574]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:39:59,878: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:39:59,883: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:39:59,887: _socket.py: _handshake: _socket: [#B2AA]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:39:59,887: _socket.py: _handshake: _socket: [#B2AA]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:39:59,889: _socket.py: _handshake: _socket: [#B2AA]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:39:59,889: _bolt4.py: hello: _bolt4: [#B2AA]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:39:59,895: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-268', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:39:59,895: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:39:59,896: _bolt4.py: run: _bolt4: [#B2AA]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:39:59,896: _bolt4.py: pull: _bolt4: [#B2AA]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:39:59,901: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:39:59,901: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:39:59,902: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: RECORD * 1
+DEBUG: 2023-09-15 18:39:59,902: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:39:59,902: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:40:01,772: _bolt4.py: begin: _bolt4: [#B2AA]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:40:01,774: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:40:01,774: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:40:01,775: _bolt4.py: run: _bolt4: [#B2AA]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:40:01,775: _bolt4.py: pull: _bolt4: [#B2AA]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:40:01,789: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:40:01,789: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: RECORD * 1
+DEBUG: 2023-09-15 18:40:01,791: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:40:01,791: _bolt4.py: commit: _bolt4: [#B2AA]  C: COMMIT
+DEBUG: 2023-09-15 18:40:01,795: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDiQ'}
+DEBUG: 2023-09-15 18:40:01,795: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:40:01,820: _bolt4.py: begin: _bolt4: [#B2AA]  C: BEGIN {}
+DEBUG: 2023-09-15 18:40:01,822: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:40:01,822: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:40:01,826: _bolt4.py: run: _bolt4: [#B2AA]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        DETACH DELETE n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:40:01,826: _bolt4.py: pull: _bolt4: [#B2AA]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:40:01,923: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'t_first': 96, 'fields': [], 'qid': 0}
+DEBUG: 2023-09-15 18:40:01,924: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'stats': {'nodes-deleted': 1}, 'type': 'w', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:40:01,924: _bolt4.py: commit: _bolt4: [#B2AA]  C: COMMIT
+DEBUG: 2023-09-15 18:40:01,944: _bolt4.py: fetch_message: _bolt4: [#B2AA]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:40:01,945: _bolt4.py: _on_server_state_change: _bolt4: [#B2AA]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:40:33,188: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:40:33,190: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:40:33,194: _socket.py: _handshake: _socket: [#CB96]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:40:33,195: _socket.py: _handshake: _socket: [#CB96]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:40:33,201: _socket.py: _handshake: _socket: [#CB96]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:40:33,201: _bolt4.py: hello: _bolt4: [#CB96]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:40:33,205: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-277', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:40:33,205: _bolt4.py: _on_server_state_change: _bolt4: [#CB96]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:40:33,205: _bolt4.py: run: _bolt4: [#CB96]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:40:33,206: _bolt4.py: pull: _bolt4: [#CB96]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:40:33,208: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:40:33,208: _bolt4.py: _on_server_state_change: _bolt4: [#CB96]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:40:33,210: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: RECORD * 1
+DEBUG: 2023-09-15 18:40:33,210: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:40:33,211: _bolt4.py: _on_server_state_change: _bolt4: [#CB96]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:41:52,606: _bolt4.py: begin: _bolt4: [#CB96]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:41:52,608: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:41:52,609: _bolt4.py: _on_server_state_change: _bolt4: [#CB96]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:41:52,613: _bolt4.py: run: _bolt4: [#CB96]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:41:52,613: _bolt4.py: pull: _bolt4: [#CB96]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:41:52,672: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {'t_first': 58, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:41:52,674: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:41:52,674: _bolt4.py: commit: _bolt4: [#CB96]  C: COMMIT
+DEBUG: 2023-09-15 18:41:52,678: _bolt4.py: fetch_message: _bolt4: [#CB96]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:41:52,678: _bolt4.py: _on_server_state_change: _bolt4: [#CB96]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:44:28,766: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:44:28,769: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:44:28,772: _socket.py: _handshake: _socket: [#B08A]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:44:28,772: _socket.py: _handshake: _socket: [#B08A]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:44:28,774: _socket.py: _handshake: _socket: [#B08A]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:44:28,774: _bolt4.py: hello: _bolt4: [#B08A]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:44:28,779: _bolt4.py: fetch_message: _bolt4: [#B08A]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-314', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:44:28,780: _bolt4.py: _on_server_state_change: _bolt4: [#B08A]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:44:28,780: _bolt4.py: run: _bolt4: [#B08A]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:44:28,780: _bolt4.py: pull: _bolt4: [#B08A]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:44:28,784: _bolt4.py: fetch_message: _bolt4: [#B08A]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:44:28,784: _bolt4.py: _on_server_state_change: _bolt4: [#B08A]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:44:28,786: _bolt4.py: fetch_message: _bolt4: [#B08A]  S: RECORD * 1
+DEBUG: 2023-09-15 18:44:28,786: _bolt4.py: fetch_message: _bolt4: [#B08A]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:28,786: _bolt4.py: _on_server_state_change: _bolt4: [#B08A]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:44:36,712: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:44:36,716: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:44:36,720: _socket.py: _handshake: _socket: [#CB64]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:44:36,720: _socket.py: _handshake: _socket: [#CB64]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:44:36,722: _socket.py: _handshake: _socket: [#CB64]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:44:36,722: _bolt4.py: hello: _bolt4: [#CB64]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:44:36,727: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-315', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:44:36,727: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:44:36,727: _bolt4.py: run: _bolt4: [#CB64]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:44:36,728: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:44:36,730: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 18:44:36,730: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:44:36,731: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: RECORD * 1
+DEBUG: 2023-09-15 18:44:36,732: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:36,732: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:44:42,250: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:44:42,254: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:44:42,255: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:44:42,256: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:44:42,257: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:44:42,263: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:44:42,264: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:42,264: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:44:42,268: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:44:42,268: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:44:44,862: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:44:44,864: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:44:44,864: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:44:44,864: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:44:44,865: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:44:44,869: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:44:44,869: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:44,869: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:44:44,872: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:44:44,872: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:44:46,016: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:44:46,018: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:44:46,018: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:44:46,019: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:44:46,019: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:44:46,024: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:44:46,025: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:46,026: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:44:46,033: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:44:46,033: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:44:47,050: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:44:47,052: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:44:47,052: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:44:47,053: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:44:47,053: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:44:47,057: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:44:47,058: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:47,059: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:44:47,063: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:44:47,064: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:44:49,150: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:44:49,151: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:44:49,152: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:44:49,152: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:44:49,152: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:44:49,162: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:44:49,163: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:44:49,163: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:44:49,174: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:44:49,175: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:45:16,338: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:45:16,340: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:45:16,340: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:45:16,341: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:45:16,341: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:45:16,344: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:45:16,345: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:45:16,345: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:45:16,351: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDmQ'}
+DEBUG: 2023-09-15 18:45:16,351: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:45:16,359: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 18:45:16,362: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 18:45:16,850: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {}
+DEBUG: 2023-09-15 18:45:16,852: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:45:16,852: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:45:16,853: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        CREATE (n:User { email: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': 'user@example.com', 'all_props': {'created': Structure[0x64](1694803516, 847940000), 'merged': Structure[0x64](1694803516, 847940000), 'id': 'ad206d09-1b26-45fc-9203-cfd957c1ccef', 'password': '$2b$12$DrJANgj5ex8Hhe.pbE/uUOlzPKuLCJZcioVOo31r1mJSTBxW3saEy', 'fullname': 'string'}} {}
+DEBUG: 2023-09-15 18:45:16,854: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:45:16,859: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:45:16,862: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: RECORD * 1
+DEBUG: 2023-09-15 18:45:16,862: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 6}, 'type': 'rw', 't_last': 4, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:45:16,863: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:45:16,903: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDqQ'}
+DEBUG: 2023-09-15 18:45:16,903: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:45:20,303: _bolt4.py: begin: _bolt4: [#CB64]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:45:20,305: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:45:20,305: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:45:20,306: _bolt4.py: run: _bolt4: [#CB64]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:45:20,306: _bolt4.py: pull: _bolt4: [#CB64]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:45:20,355: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'t_first': 48, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:45:20,358: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: RECORD * 1
+DEBUG: 2023-09-15 18:45:20,359: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:45:20,360: _bolt4.py: commit: _bolt4: [#CB64]  C: COMMIT
+DEBUG: 2023-09-15 18:45:20,361: _bolt4.py: fetch_message: _bolt4: [#CB64]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDqQ'}
+DEBUG: 2023-09-15 18:45:20,362: _bolt4.py: _on_server_state_change: _bolt4: [#CB64]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:57:08,230: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 18:57:08,234: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 18:57:08,239: _socket.py: _handshake: _socket: [#A1DC]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 18:57:08,239: _socket.py: _handshake: _socket: [#A1DC]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 18:57:08,241: _socket.py: _handshake: _socket: [#A1DC]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 18:57:08,242: _bolt4.py: hello: _bolt4: [#A1DC]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 18:57:08,245: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-396', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 18:57:08,246: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: CONNECTED > READY
+DEBUG: 2023-09-15 18:57:08,246: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 18:57:08,246: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 18:57:08,248: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 18:57:08,249: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > STREAMING
+DEBUG: 2023-09-15 18:57:08,249: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 18:57:08,250: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDqQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:57:08,250: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: STREAMING > READY
+DEBUG: 2023-09-15 18:58:08,819: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 18:58:08,819: multipart.py: callback: multipart: Calling on_field_name with data[0:10]
+DEBUG: 2023-09-15 18:58:08,819: multipart.py: callback: multipart: Calling on_field_data with data[11:19]
+DEBUG: 2023-09-15 18:58:08,820: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 18:58:08,820: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 18:58:08,820: multipart.py: callback: multipart: Calling on_field_name with data[20:28]
+DEBUG: 2023-09-15 18:58:08,820: multipart.py: callback: multipart: Calling on_field_data with data[29:47]
+DEBUG: 2023-09-15 18:58:08,820: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 18:58:08,821: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 18:58:08,821: multipart.py: callback: multipart: Calling on_field_name with data[48:56]
+DEBUG: 2023-09-15 18:58:08,821: multipart.py: callback: multipart: Calling on_field_data with data[57:63]
+DEBUG: 2023-09-15 18:58:08,823: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 18:58:08,823: multipart.py: callback: multipart: Calling on_end with no data
+DEBUG: 2023-09-15 18:58:08,826: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:58:08,828: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:58:08,828: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:58:08,831: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:58:08,832: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:58:08,837: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:58:08,838: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 18:58:08,839: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:58:08,839: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 18:58:08,841: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDqQ'}
+DEBUG: 2023-09-15 18:58:08,842: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:58:08,885: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 18:58:08,925: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 18:58:13,588: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 18:58:13,590: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:58:13,590: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:58:13,590: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 18:58:13,590: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:58:13,594: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:58:13,595: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 18:58:13,596: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:58:13,596: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 18:58:13,598: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDqQ'}
+DEBUG: 2023-09-15 18:58:13,599: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 18:58:14,031: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {}
+DEBUG: 2023-09-15 18:58:14,033: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 18:58:14,033: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 18:58:14,034: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MERGE (n:User { email: $pp })\n        ON MATCH SET n += $set_on_match\n        ON CREATE SET n += $set_on_create\n        SET n += $always_set\n        RETURN n\n        ' {'pp': 'user@example.com', 'always_set': {'merged': Structure[0x64](1694803516, 847940000), 'id': 'ad206d09-1b26-45fc-9203-cfd957c1ccef', 'email': 'user@example.com', 'password': '$2b$12$y.tjizY6.hvcO8RQtFRKgeklaR6Gu.NTBANeXTxt8ycqnxmmBP0u2', 'fullname': 'SAMANI SIEWE Darix'}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1694803516, 847940000)}} {}
+DEBUG: 2023-09-15 18:58:14,035: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 18:58:14,202: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 165, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 18:58:14,220: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 18:58:14,222: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'stats': {'properties-set': 5}, 'type': 'rw', 't_last': 18, 'db': 'neo4j'}
+DEBUG: 2023-09-15 18:58:14,222: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 18:58:14,250: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDuQ'}
+DEBUG: 2023-09-15 18:58:14,251: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:04:09,989: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 19:04:09,990: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:04:09,990: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:04:09,991: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 19:04:09,991: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:04:09,997: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:04:09,999: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 19:04:10,000: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:04:10,001: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:04:10,003: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDuQ'}
+DEBUG: 2023-09-15 19:04:10,004: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:04:10,006: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 19:04:10,008: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:04:10,008: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:04:10,008: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH(n:Poste)\n        RETURN n{.*}\n        ORDER BY n.created DESC\n        SKIP $skip\n        LIMIT $limit\n        ' {'skip': 0, 'limit': 100} {}
+DEBUG: 2023-09-15 19:04:10,008: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:04:10,457: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 444, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:04:10,459: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 5, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:04:10,460: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:04:10,461: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDuQ'}
+DEBUG: 2023-09-15 19:04:10,461: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:04:10,462: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 19:04:10,463: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:04:10,463: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:04:10,463: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH(n:Poste)\n        RETURN n{.*}\n        ORDER BY n.created DESC\n        SKIP $skip\n        LIMIT $limit\n        ' {'skip': 0, 'limit': 100} {}
+DEBUG: 2023-09-15 19:04:10,464: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:04:10,467: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:04:10,470: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:04:10,471: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:04:10,472: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDuQ'}
+DEBUG: 2023-09-15 19:04:10,473: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:04:33,456: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 19:04:33,458: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:04:33,459: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:04:33,459: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 19:04:33,459: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:04:33,467: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:04:33,469: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 19:04:33,470: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:04:33,470: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:04:33,471: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDuQ'}
+DEBUG: 2023-09-15 19:04:33,471: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:04:33,474: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {}
+DEBUG: 2023-09-15 19:04:33,478: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:04:33,479: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:04:33,482: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        CREATE (n:Poste { id: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': '8e4546f2-adf7-4082-9bd5-a6288e83922d', 'all_props': {'created': Structure[0x64](1694804673, 472732000), 'merged': Structure[0x64](1694804673, 472732000), 'title': 'string', 'content': 'string', 'date_created': Structure[0x64](1694804227, 994734000), 'date_updated': Structure[0x64](1694804673, 472674000), 'tags': ['string', 'string']}} {}
+DEBUG: 2023-09-15 19:04:33,483: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:04:33,545: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 58, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:04:33,547: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 19:04:33,548: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 8}, 'type': 'rw', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:04:33,549: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:04:33,581: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcDyQ'}
+DEBUG: 2023-09-15 19:04:33,582: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:04:33,589: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {}
+DEBUG: 2023-09-15 19:04:33,592: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:04:33,592: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:04:33,594: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (source:User { email: $source_prop }),\n            (target:Poste { id: $target_prop })\n        MERGE (source)-[r:POSTED {  }]->(target)\n        ON MATCH SET r += $set_on_match\n        ON CREATE SET r += $set_on_create\n        SET r += $always_set\n        ' {'source_prop': 'user@example.com', 'target_prop': '8e4546f2-adf7-4082-9bd5-a6288e83922d', 'always_set': {'merged': Structure[0x64](1694804673, 583004000)}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1694804673, 583004000)}} {}
+DEBUG: 2023-09-15 19:04:33,594: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:04:33,957: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 361, 'fields': [], 'qid': 0}
+DEBUG: 2023-09-15 19:04:33,958: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'stats': {'relationships-created': 1, 'properties-set': 2}, 'type': 'w', 't_last': 0, 'db': 'neo4j', 'notifications': [{'severity': 'INFORMATION', 'description': 'If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (target))', 'code': 'Neo.ClientNotification.Statement.CartesianProduct', 'position': {'column': 1, 'offset': 9, 'line': 2}, 'title': 'This query builds a cartesian product between disconnected patterns.'}]}
+DEBUG: 2023-09-15 19:04:33,958: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:04:33,989: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD2Q'}
+DEBUG: 2023-09-15 19:04:33,989: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:52:18,424: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 19:52:18,424: multipart.py: callback: multipart: Calling on_field_name with data[0:10]
+DEBUG: 2023-09-15 19:52:18,424: multipart.py: callback: multipart: Calling on_field_data with data[11:19]
+DEBUG: 2023-09-15 19:52:18,424: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 19:52:18,424: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_name with data[20:28]
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_data with data[29:47]
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_name with data[48:56]
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_data with data[57:63]
+DEBUG: 2023-09-15 19:52:18,425: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 19:52:18,426: multipart.py: callback: multipart: Calling on_end with no data
+DEBUG: 2023-09-15 19:52:18,427: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 19:52:18,428: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:52:18,428: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:52:18,429: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 19:52:18,429: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:52:18,436: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 5, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:52:18,437: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 19:52:18,438: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:52:18,438: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:52:18,440: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD2Q'}
+DEBUG: 2023-09-15 19:52:18,440: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:52:24,832: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 19:52:24,833: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:52:24,833: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:52:24,834: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 19:52:24,834: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:52:24,836: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 0, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:52:24,838: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 19:52:24,838: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:52:24,839: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:52:24,840: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD2Q'}
+DEBUG: 2023-09-15 19:52:24,841: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:52:24,843: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {}
+DEBUG: 2023-09-15 19:52:24,848: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:52:24,848: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:52:24,851: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        CREATE (n:Poste { id: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': '4225c7d9-9b04-4b7a-9a87-fee5d137cad9', 'all_props': {'created': Structure[0x64](1694807544, 842533000), 'merged': Structure[0x64](1694807544, 842533000), 'title': 'string string string', 'content': 'string', 'date_created': Structure[0x64](1694804227, 994734000), 'date_updated': Structure[0x64](1694807544, 842481000), 'tags': ['string', 'string', 'string']}} {}
+DEBUG: 2023-09-15 19:52:24,852: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:52:24,858: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 19:52:24,864: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: RECORD * 1
+DEBUG: 2023-09-15 19:52:24,870: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 8}, 'type': 'rw', 't_last': 8, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:52:24,871: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:52:24,949: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD6Q'}
+DEBUG: 2023-09-15 19:52:24,949: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:52:24,951: _bolt4.py: begin: _bolt4: [#A1DC]  C: BEGIN {}
+DEBUG: 2023-09-15 19:52:24,953: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {}
+DEBUG: 2023-09-15 19:52:24,953: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 19:52:24,954: _bolt4.py: run: _bolt4: [#A1DC]  C: RUN '\n        MATCH (source:User { email: $source_prop }),\n            (target:Poste { id: $target_prop })\n        MERGE (source)-[r:POSTED {  }]->(target)\n        ON MATCH SET r += $set_on_match\n        ON CREATE SET r += $set_on_create\n        SET r += $always_set\n        ' {'source_prop': 'user@example.com', 'target_prop': '4225c7d9-9b04-4b7a-9a87-fee5d137cad9', 'always_set': {'merged': Structure[0x64](1694807544, 950375000)}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1694807544, 950375000)}} {}
+DEBUG: 2023-09-15 19:52:24,954: _bolt4.py: pull: _bolt4: [#A1DC]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 19:52:24,959: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'t_first': 4, 'fields': [], 'qid': 0}
+DEBUG: 2023-09-15 19:52:24,960: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'stats': {'relationships-created': 1, 'properties-set': 2}, 'type': 'w', 't_last': 0, 'db': 'neo4j', 'notifications': [{'severity': 'INFORMATION', 'description': 'If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (target))', 'code': 'Neo.ClientNotification.Statement.CartesianProduct', 'position': {'column': 1, 'offset': 9, 'line': 2}, 'title': 'This query builds a cartesian product between disconnected patterns.'}]}
+DEBUG: 2023-09-15 19:52:24,960: _bolt4.py: commit: _bolt4: [#A1DC]  C: COMMIT
+DEBUG: 2023-09-15 19:52:24,982: _bolt4.py: fetch_message: _bolt4: [#A1DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q'}
+DEBUG: 2023-09-15 19:52:24,983: _bolt4.py: _on_server_state_change: _bolt4: [#A1DC]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 19:57:57,394: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 19:57:57,395: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 19:57:57,398: _socket.py: _handshake: _socket: [#9646]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 19:57:57,398: _socket.py: _handshake: _socket: [#9646]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 19:57:57,400: _socket.py: _handshake: _socket: [#9646]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 19:57:57,400: _bolt4.py: hello: _bolt4: [#9646]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 19:57:57,405: _bolt4.py: fetch_message: _bolt4: [#9646]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-739', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 19:57:57,405: _bolt4.py: _on_server_state_change: _bolt4: [#9646]  State: CONNECTED > READY
+DEBUG: 2023-09-15 19:57:57,405: _bolt4.py: run: _bolt4: [#9646]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 19:57:57,405: _bolt4.py: pull: _bolt4: [#9646]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 19:57:57,408: _bolt4.py: fetch_message: _bolt4: [#9646]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 19:57:57,409: _bolt4.py: _on_server_state_change: _bolt4: [#9646]  State: READY > STREAMING
+DEBUG: 2023-09-15 19:57:57,409: _bolt4.py: fetch_message: _bolt4: [#9646]  S: RECORD * 1
+DEBUG: 2023-09-15 19:57:57,410: _bolt4.py: fetch_message: _bolt4: [#9646]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 19:57:57,410: _bolt4.py: _on_server_state_change: _bolt4: [#9646]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:02:38,509: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:02:38,511: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:02:38,518: _socket.py: _handshake: _socket: [#CDF4]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:02:38,519: _socket.py: _handshake: _socket: [#CDF4]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:02:38,520: _socket.py: _handshake: _socket: [#CDF4]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:02:38,521: _bolt4.py: hello: _bolt4: [#CDF4]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:02:38,529: _bolt4.py: fetch_message: _bolt4: [#CDF4]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-768', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:02:38,531: _bolt4.py: _on_server_state_change: _bolt4: [#CDF4]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:02:38,531: _bolt4.py: run: _bolt4: [#CDF4]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:02:38,532: _bolt4.py: pull: _bolt4: [#CDF4]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:02:38,543: _bolt4.py: fetch_message: _bolt4: [#CDF4]  S: SUCCESS {'t_first': 9, 'fields': ['x']}
+DEBUG: 2023-09-15 20:02:38,544: _bolt4.py: _on_server_state_change: _bolt4: [#CDF4]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:02:38,548: _bolt4.py: fetch_message: _bolt4: [#CDF4]  S: RECORD * 1
+DEBUG: 2023-09-15 20:02:38,552: _bolt4.py: fetch_message: _bolt4: [#CDF4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:02:38,553: _bolt4.py: _on_server_state_change: _bolt4: [#CDF4]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:04:49,409: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:04:49,412: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:04:49,418: _socket.py: _handshake: _socket: [#8454]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:04:49,419: _socket.py: _handshake: _socket: [#8454]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:04:49,420: _socket.py: _handshake: _socket: [#8454]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:04:49,421: _bolt4.py: hello: _bolt4: [#8454]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:04:49,426: _bolt4.py: fetch_message: _bolt4: [#8454]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-777', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:04:49,426: _bolt4.py: _on_server_state_change: _bolt4: [#8454]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:04:49,427: _bolt4.py: run: _bolt4: [#8454]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:04:49,428: _bolt4.py: pull: _bolt4: [#8454]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:04:49,432: _bolt4.py: fetch_message: _bolt4: [#8454]  S: SUCCESS {'t_first': 2, 'fields': ['x']}
+DEBUG: 2023-09-15 20:04:49,432: _bolt4.py: _on_server_state_change: _bolt4: [#8454]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:04:49,433: _bolt4.py: fetch_message: _bolt4: [#8454]  S: RECORD * 1
+DEBUG: 2023-09-15 20:04:49,433: _bolt4.py: fetch_message: _bolt4: [#8454]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:04:49,434: _bolt4.py: _on_server_state_change: _bolt4: [#8454]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:05:12,292: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:05:12,295: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:05:12,298: _socket.py: _handshake: _socket: [#C0DC]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:05:12,298: _socket.py: _handshake: _socket: [#C0DC]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:05:12,299: _socket.py: _handshake: _socket: [#C0DC]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:05:12,300: _bolt4.py: hello: _bolt4: [#C0DC]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:05:12,304: _bolt4.py: fetch_message: _bolt4: [#C0DC]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-778', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:05:12,305: _bolt4.py: _on_server_state_change: _bolt4: [#C0DC]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:05:12,305: _bolt4.py: run: _bolt4: [#C0DC]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:05:12,305: _bolt4.py: pull: _bolt4: [#C0DC]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:05:12,307: _bolt4.py: fetch_message: _bolt4: [#C0DC]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:05:12,307: _bolt4.py: _on_server_state_change: _bolt4: [#C0DC]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:05:12,308: _bolt4.py: fetch_message: _bolt4: [#C0DC]  S: RECORD * 1
+DEBUG: 2023-09-15 20:05:12,308: _bolt4.py: fetch_message: _bolt4: [#C0DC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:05:12,308: _bolt4.py: _on_server_state_change: _bolt4: [#C0DC]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:06:21,851: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:06:21,856: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:06:21,861: _socket.py: _handshake: _socket: [#BC7A]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:06:21,861: _socket.py: _handshake: _socket: [#BC7A]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:06:21,863: _socket.py: _handshake: _socket: [#BC7A]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:06:21,863: _bolt4.py: hello: _bolt4: [#BC7A]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:06:21,874: _bolt4.py: fetch_message: _bolt4: [#BC7A]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-785', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:06:21,874: _bolt4.py: _on_server_state_change: _bolt4: [#BC7A]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:06:21,875: _bolt4.py: run: _bolt4: [#BC7A]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:06:21,877: _bolt4.py: pull: _bolt4: [#BC7A]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:06:21,889: _bolt4.py: fetch_message: _bolt4: [#BC7A]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:06:21,892: _bolt4.py: _on_server_state_change: _bolt4: [#BC7A]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:06:21,892: _bolt4.py: fetch_message: _bolt4: [#BC7A]  S: RECORD * 1
+DEBUG: 2023-09-15 20:06:21,893: _bolt4.py: fetch_message: _bolt4: [#BC7A]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:06:21,893: _bolt4.py: _on_server_state_change: _bolt4: [#BC7A]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:07:04,781: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:07:04,783: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:07:04,787: _socket.py: _handshake: _socket: [#9476]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:07:04,787: _socket.py: _handshake: _socket: [#9476]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:07:04,788: _socket.py: _handshake: _socket: [#9476]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:07:04,788: _bolt4.py: hello: _bolt4: [#9476]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:07:04,796: _bolt4.py: fetch_message: _bolt4: [#9476]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-796', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:07:04,796: _bolt4.py: _on_server_state_change: _bolt4: [#9476]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:07:04,796: _bolt4.py: run: _bolt4: [#9476]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:07:04,797: _bolt4.py: pull: _bolt4: [#9476]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:07:04,799: _bolt4.py: fetch_message: _bolt4: [#9476]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:07:04,800: _bolt4.py: _on_server_state_change: _bolt4: [#9476]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:07:04,800: _bolt4.py: fetch_message: _bolt4: [#9476]  S: RECORD * 1
+DEBUG: 2023-09-15 20:07:04,800: _bolt4.py: fetch_message: _bolt4: [#9476]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:07:04,800: _bolt4.py: _on_server_state_change: _bolt4: [#9476]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:07:59,153: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:07:59,155: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:07:59,159: _socket.py: _handshake: _socket: [#B2C8]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:07:59,159: _socket.py: _handshake: _socket: [#B2C8]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:07:59,160: _socket.py: _handshake: _socket: [#B2C8]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:07:59,160: _bolt4.py: hello: _bolt4: [#B2C8]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:07:59,165: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-801', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:07:59,165: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:07:59,166: _bolt4.py: run: _bolt4: [#B2C8]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:07:59,166: _bolt4.py: pull: _bolt4: [#B2C8]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:07:59,168: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:07:59,169: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:07:59,169: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: RECORD * 1
+DEBUG: 2023-09-15 20:07:59,170: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:07:59,170: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:08:11,047: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:08:11,047: multipart.py: callback: multipart: Calling on_field_name with data[0:10]
+DEBUG: 2023-09-15 20:08:11,048: multipart.py: callback: multipart: Calling on_field_data with data[11:19]
+DEBUG: 2023-09-15 20:08:11,048: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:08:11,049: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:08:11,049: multipart.py: callback: multipart: Calling on_field_name with data[20:28]
+DEBUG: 2023-09-15 20:08:11,050: multipart.py: callback: multipart: Calling on_field_data with data[29:52]
+DEBUG: 2023-09-15 20:08:11,052: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:08:11,052: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:08:11,053: multipart.py: callback: multipart: Calling on_field_name with data[53:61]
+DEBUG: 2023-09-15 20:08:11,053: multipart.py: callback: multipart: Calling on_field_data with data[62:68]
+DEBUG: 2023-09-15 20:08:11,054: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:08:11,054: multipart.py: callback: multipart: Calling on_end with no data
+DEBUG: 2023-09-15 20:08:11,057: _bolt4.py: begin: _bolt4: [#B2C8]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:08:11,058: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:08:11,058: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:08:11,059: _bolt4.py: run: _bolt4: [#B2C8]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'samanidarix@gmail.com'} {}
+DEBUG: 2023-09-15 20:08:11,059: _bolt4.py: pull: _bolt4: [#B2C8]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:08:11,064: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:08:11,065: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:08:11,065: _bolt4.py: commit: _bolt4: [#B2C8]  C: COMMIT
+DEBUG: 2023-09-15 20:08:11,067: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q'}
+DEBUG: 2023-09-15 20:08:11,067: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:08:22,599: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:08:22,600: multipart.py: callback: multipart: Calling on_field_name with data[0:10]
+DEBUG: 2023-09-15 20:08:22,600: multipart.py: callback: multipart: Calling on_field_data with data[11:19]
+DEBUG: 2023-09-15 20:08:22,600: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:08:22,601: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:08:22,601: multipart.py: callback: multipart: Calling on_field_name with data[20:28]
+DEBUG: 2023-09-15 20:08:22,601: multipart.py: callback: multipart: Calling on_field_data with data[29:47]
+DEBUG: 2023-09-15 20:08:22,601: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:08:22,601: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:08:22,602: multipart.py: callback: multipart: Calling on_field_name with data[48:56]
+DEBUG: 2023-09-15 20:08:22,602: multipart.py: callback: multipart: Calling on_field_data with data[57:63]
+DEBUG: 2023-09-15 20:08:22,602: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:08:22,602: multipart.py: callback: multipart: Calling on_end with no data
+DEBUG: 2023-09-15 20:08:22,606: _bolt4.py: begin: _bolt4: [#B2C8]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:08:22,607: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:08:22,608: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:08:22,608: _bolt4.py: run: _bolt4: [#B2C8]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:08:22,608: _bolt4.py: pull: _bolt4: [#B2C8]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:08:22,610: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:08:22,611: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: RECORD * 1
+DEBUG: 2023-09-15 20:08:22,612: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:08:22,612: _bolt4.py: commit: _bolt4: [#B2C8]  C: COMMIT
+DEBUG: 2023-09-15 20:08:22,614: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q'}
+DEBUG: 2023-09-15 20:08:22,615: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:08:22,651: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 20:08:22,688: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 20:08:44,179: _bolt4.py: begin: _bolt4: [#B2C8]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:08:44,180: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:08:44,181: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:08:44,181: _bolt4.py: run: _bolt4: [#B2C8]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:08:44,182: _bolt4.py: pull: _bolt4: [#B2C8]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:08:44,191: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:08:44,192: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: RECORD * 1
+DEBUG: 2023-09-15 20:08:44,193: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:08:44,193: _bolt4.py: commit: _bolt4: [#B2C8]  C: COMMIT
+DEBUG: 2023-09-15 20:08:44,195: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q'}
+DEBUG: 2023-09-15 20:08:44,196: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:08:44,199: _bolt4.py: begin: _bolt4: [#B2C8]  C: BEGIN {}
+DEBUG: 2023-09-15 20:08:44,201: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:08:44,202: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:08:44,203: _bolt4.py: rollback: _bolt4: [#B2C8]  C: ROLLBACK
+DEBUG: 2023-09-15 20:08:44,205: _bolt4.py: fetch_message: _bolt4: [#B2C8]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:08:44,206: _bolt4.py: _on_server_state_change: _bolt4: [#B2C8]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:09:20,206: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:09:20,208: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:09:20,212: _socket.py: _handshake: _socket: [#BC26]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:09:20,212: _socket.py: _handshake: _socket: [#BC26]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:09:20,213: _socket.py: _handshake: _socket: [#BC26]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:09:20,214: _bolt4.py: hello: _bolt4: [#BC26]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:09:20,219: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-814', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:09:20,220: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:09:20,220: _bolt4.py: run: _bolt4: [#BC26]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:09:20,221: _bolt4.py: pull: _bolt4: [#BC26]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:09:20,223: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:09:20,223: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:09:20,223: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: RECORD * 1
+DEBUG: 2023-09-15 20:09:20,224: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:09:20,224: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:09:24,089: _bolt4.py: begin: _bolt4: [#BC26]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:09:24,090: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:09:24,090: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:09:24,091: _bolt4.py: run: _bolt4: [#BC26]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:09:24,091: _bolt4.py: pull: _bolt4: [#BC26]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:09:24,100: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {'t_first': 7, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:09:24,102: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: RECORD * 1
+DEBUG: 2023-09-15 20:09:24,103: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:09:24,103: _bolt4.py: commit: _bolt4: [#BC26]  C: COMMIT
+DEBUG: 2023-09-15 20:09:24,105: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q'}
+DEBUG: 2023-09-15 20:09:24,105: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:09:24,126: _bolt4.py: begin: _bolt4: [#BC26]  C: BEGIN {}
+DEBUG: 2023-09-15 20:09:24,127: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:09:24,128: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:09:24,128: _bolt4.py: rollback: _bolt4: [#BC26]  C: ROLLBACK
+DEBUG: 2023-09-15 20:09:24,130: _bolt4.py: fetch_message: _bolt4: [#BC26]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:09:24,130: _bolt4.py: _on_server_state_change: _bolt4: [#BC26]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:10:08,533: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:10:08,536: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:10:08,539: _socket.py: _handshake: _socket: [#8788]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:10:08,540: _socket.py: _handshake: _socket: [#8788]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:10:08,541: _socket.py: _handshake: _socket: [#8788]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:10:08,541: _bolt4.py: hello: _bolt4: [#8788]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:10:08,546: _bolt4.py: fetch_message: _bolt4: [#8788]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-819', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:10:08,546: _bolt4.py: _on_server_state_change: _bolt4: [#8788]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:10:08,546: _bolt4.py: run: _bolt4: [#8788]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:10:08,547: _bolt4.py: pull: _bolt4: [#8788]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:10:08,549: _bolt4.py: fetch_message: _bolt4: [#8788]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:10:08,549: _bolt4.py: _on_server_state_change: _bolt4: [#8788]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:10:08,550: _bolt4.py: fetch_message: _bolt4: [#8788]  S: RECORD * 1
+DEBUG: 2023-09-15 20:10:08,552: _bolt4.py: fetch_message: _bolt4: [#8788]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:10:08,553: _bolt4.py: _on_server_state_change: _bolt4: [#8788]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:10:30,161: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:10:30,164: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:10:30,169: _socket.py: _handshake: _socket: [#A78C]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:10:30,169: _socket.py: _handshake: _socket: [#A78C]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:10:30,174: _socket.py: _handshake: _socket: [#A78C]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:10:30,175: _bolt4.py: hello: _bolt4: [#A78C]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:10:30,183: _bolt4.py: fetch_message: _bolt4: [#A78C]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-824', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:10:30,183: _bolt4.py: _on_server_state_change: _bolt4: [#A78C]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:10:30,184: _bolt4.py: run: _bolt4: [#A78C]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:10:30,186: _bolt4.py: pull: _bolt4: [#A78C]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:10:30,190: _bolt4.py: fetch_message: _bolt4: [#A78C]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:10:30,194: _bolt4.py: _on_server_state_change: _bolt4: [#A78C]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:10:30,195: _bolt4.py: fetch_message: _bolt4: [#A78C]  S: RECORD * 1
+DEBUG: 2023-09-15 20:10:30,196: _bolt4.py: fetch_message: _bolt4: [#A78C]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:10:30,196: _bolt4.py: _on_server_state_change: _bolt4: [#A78C]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:11:09,094: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:11:09,096: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:11:09,099: _socket.py: _handshake: _socket: [#C266]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:11:09,100: _socket.py: _handshake: _socket: [#C266]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:11:09,101: _socket.py: _handshake: _socket: [#C266]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:11:09,102: _bolt4.py: hello: _bolt4: [#C266]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:11:09,106: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-825', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:11:09,109: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:11:09,110: _bolt4.py: run: _bolt4: [#C266]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:11:09,110: _bolt4.py: pull: _bolt4: [#C266]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:11:09,113: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:11:09,113: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:11:09,114: _bolt4.py: fetch_message: _bolt4: [#C266]  S: RECORD * 1
+DEBUG: 2023-09-15 20:11:09,114: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:11:09,114: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:11:10,430: _bolt4.py: begin: _bolt4: [#C266]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:11:10,434: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:11:10,437: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:11:10,438: _bolt4.py: run: _bolt4: [#C266]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:11:10,438: _bolt4.py: pull: _bolt4: [#C266]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:11:10,446: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:11:10,455: _bolt4.py: fetch_message: _bolt4: [#C266]  S: RECORD * 1
+DEBUG: 2023-09-15 20:11:10,456: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'type': 'r', 't_last': 12, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:11:10,456: _bolt4.py: commit: _bolt4: [#C266]  C: COMMIT
+DEBUG: 2023-09-15 20:11:10,459: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcD+Q'}
+DEBUG: 2023-09-15 20:11:10,459: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:11:10,482: _bolt4.py: begin: _bolt4: [#C266]  C: BEGIN {}
+DEBUG: 2023-09-15 20:11:10,484: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:11:10,485: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:11:10,485: _bolt4.py: run: _bolt4: [#C266]  C: RUN '\n        MATCH (n:Poste)\n        WHERE n.id = $pp\n        DETACH DELETE n\n        ' {'pp': '8e4546f2-adf7-4082-9bd5-a6288e83922d'} {}
+DEBUG: 2023-09-15 20:11:10,485: _bolt4.py: pull: _bolt4: [#C266]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:11:10,555: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'t_first': 68, 'fields': [], 'qid': 0}
+DEBUG: 2023-09-15 20:11:10,556: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'stats': {'nodes-deleted': 1, 'relationships-deleted': 1}, 'type': 'w', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:11:10,556: _bolt4.py: commit: _bolt4: [#C266]  C: COMMIT
+DEBUG: 2023-09-15 20:11:10,581: _bolt4.py: fetch_message: _bolt4: [#C266]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcECQ'}
+DEBUG: 2023-09-15 20:11:10,582: _bolt4.py: _on_server_state_change: _bolt4: [#C266]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:11:32,784: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:11:32,787: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:11:32,791: _socket.py: _handshake: _socket: [#B482]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:11:32,791: _socket.py: _handshake: _socket: [#B482]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:11:32,792: _socket.py: _handshake: _socket: [#B482]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:11:32,792: _bolt4.py: hello: _bolt4: [#B482]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:11:32,796: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-831', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:11:32,797: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:11:32,797: _bolt4.py: run: _bolt4: [#B482]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:11:32,798: _bolt4.py: pull: _bolt4: [#B482]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:11:32,803: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:11:32,803: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:11:32,804: _bolt4.py: fetch_message: _bolt4: [#B482]  S: RECORD * 1
+DEBUG: 2023-09-15 20:11:32,804: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcECQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:11:32,805: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:12:27,518: _bolt4.py: begin: _bolt4: [#B482]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:12:27,520: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:12:27,521: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:12:27,521: _bolt4.py: run: _bolt4: [#B482]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:12:27,522: _bolt4.py: pull: _bolt4: [#B482]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:12:27,525: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:12:27,527: _bolt4.py: fetch_message: _bolt4: [#B482]  S: RECORD * 1
+DEBUG: 2023-09-15 20:12:27,528: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:12:27,528: _bolt4.py: commit: _bolt4: [#B482]  C: COMMIT
+DEBUG: 2023-09-15 20:12:27,530: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcECQ'}
+DEBUG: 2023-09-15 20:12:27,531: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:12:27,559: _bolt4.py: begin: _bolt4: [#B482]  C: BEGIN {}
+DEBUG: 2023-09-15 20:12:27,560: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:12:27,561: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:12:27,563: _bolt4.py: run: _bolt4: [#B482]  C: RUN '\n        CREATE (n:Poste { id: $pp })\n        SET n += $all_props\n        RETURN n\n        ' {'pp': '501b05e5-5557-429e-90f4-c5541d6f68a6', 'all_props': {'created': Structure[0x64](1694808747, 557718000), 'merged': Structure[0x64](1694808747, 557718000), 'title': 'string', 'content': 'string', 'date_created': Structure[0x64](1694808692, 597356000), 'date_updated': Structure[0x64](1694808747, 557662000), 'tags': ['string']}} {}
+DEBUG: 2023-09-15 20:12:27,563: _bolt4.py: pull: _bolt4: [#B482]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:12:27,567: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:12:27,573: _bolt4.py: fetch_message: _bolt4: [#B482]  S: RECORD * 1
+DEBUG: 2023-09-15 20:12:27,574: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'stats': {'labels-added': 1, 'nodes-created': 1, 'properties-set': 8}, 'type': 'rw', 't_last': 4, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:12:27,574: _bolt4.py: commit: _bolt4: [#B482]  C: COMMIT
+DEBUG: 2023-09-15 20:12:27,610: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEGQ'}
+DEBUG: 2023-09-15 20:12:27,610: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:12:27,613: _bolt4.py: begin: _bolt4: [#B482]  C: BEGIN {}
+DEBUG: 2023-09-15 20:12:27,614: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:12:27,614: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:12:27,615: _bolt4.py: run: _bolt4: [#B482]  C: RUN '\n        MATCH (source:User { email: $source_prop }),\n            (target:Poste { id: $target_prop })\n        MERGE (source)-[r:POSTED {  }]->(target)\n        ON MATCH SET r += $set_on_match\n        ON CREATE SET r += $set_on_create\n        SET r += $always_set\n        ' {'source_prop': 'user@example.com', 'target_prop': '501b05e5-5557-429e-90f4-c5541d6f68a6', 'always_set': {'merged': Structure[0x64](1694808747, 611007000)}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1694808747, 611007000)}} {}
+DEBUG: 2023-09-15 20:12:27,615: _bolt4.py: pull: _bolt4: [#B482]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:12:27,622: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'t_first': 4, 'fields': [], 'qid': 0}
+DEBUG: 2023-09-15 20:12:27,622: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'stats': {'relationships-created': 1, 'properties-set': 2}, 'type': 'w', 't_last': 0, 'db': 'neo4j', 'notifications': [{'severity': 'INFORMATION', 'description': 'If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (target))', 'code': 'Neo.ClientNotification.Statement.CartesianProduct', 'position': {'column': 1, 'offset': 9, 'line': 2}, 'title': 'This query builds a cartesian product between disconnected patterns.'}]}
+DEBUG: 2023-09-15 20:12:27,623: _bolt4.py: commit: _bolt4: [#B482]  C: COMMIT
+DEBUG: 2023-09-15 20:12:27,642: _bolt4.py: fetch_message: _bolt4: [#B482]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ'}
+DEBUG: 2023-09-15 20:12:27,643: _bolt4.py: _on_server_state_change: _bolt4: [#B482]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:14:14,270: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:14:14,271: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:14:14,274: _socket.py: _handshake: _socket: [#BFCC]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:14:14,274: _socket.py: _handshake: _socket: [#BFCC]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:14:14,275: _socket.py: _handshake: _socket: [#BFCC]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:14:14,275: _bolt4.py: hello: _bolt4: [#BFCC]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:14:14,280: _bolt4.py: fetch_message: _bolt4: [#BFCC]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-872', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:14:14,280: _bolt4.py: _on_server_state_change: _bolt4: [#BFCC]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:14:14,281: _bolt4.py: run: _bolt4: [#BFCC]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:14:14,282: _bolt4.py: pull: _bolt4: [#BFCC]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:14:14,287: _bolt4.py: fetch_message: _bolt4: [#BFCC]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:14:14,287: _bolt4.py: _on_server_state_change: _bolt4: [#BFCC]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:14:14,287: _bolt4.py: fetch_message: _bolt4: [#BFCC]  S: RECORD * 1
+DEBUG: 2023-09-15 20:14:14,288: _bolt4.py: fetch_message: _bolt4: [#BFCC]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:14:14,288: _bolt4.py: _on_server_state_change: _bolt4: [#BFCC]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:16:44,021: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:16:44,023: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:16:44,027: _socket.py: _handshake: _socket: [#B5A2]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:16:44,027: _socket.py: _handshake: _socket: [#B5A2]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:16:44,031: _socket.py: _handshake: _socket: [#B5A2]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:16:44,032: _bolt4.py: hello: _bolt4: [#B5A2]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:16:44,038: _bolt4.py: fetch_message: _bolt4: [#B5A2]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-885', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:16:44,038: _bolt4.py: _on_server_state_change: _bolt4: [#B5A2]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:16:44,038: _bolt4.py: run: _bolt4: [#B5A2]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:16:44,039: _bolt4.py: pull: _bolt4: [#B5A2]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:16:44,044: _bolt4.py: fetch_message: _bolt4: [#B5A2]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:16:44,044: _bolt4.py: _on_server_state_change: _bolt4: [#B5A2]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:16:44,044: _bolt4.py: fetch_message: _bolt4: [#B5A2]  S: RECORD * 1
+DEBUG: 2023-09-15 20:16:44,045: _bolt4.py: fetch_message: _bolt4: [#B5A2]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:16:44,045: _bolt4.py: _on_server_state_change: _bolt4: [#B5A2]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:31:21,907: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:31:21,910: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:31:21,923: _socket.py: _handshake: _socket: [#DE30]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:31:21,923: _socket.py: _handshake: _socket: [#DE30]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:31:21,937: _socket.py: _handshake: _socket: [#DE30]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:31:21,937: _bolt4.py: hello: _bolt4: [#DE30]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:31:21,951: _bolt4.py: fetch_message: _bolt4: [#DE30]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-956', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:31:21,952: _bolt4.py: _on_server_state_change: _bolt4: [#DE30]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:31:21,952: _bolt4.py: run: _bolt4: [#DE30]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:31:21,953: _bolt4.py: pull: _bolt4: [#DE30]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:31:21,960: _bolt4.py: fetch_message: _bolt4: [#DE30]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:31:21,960: _bolt4.py: _on_server_state_change: _bolt4: [#DE30]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:31:21,961: _bolt4.py: fetch_message: _bolt4: [#DE30]  S: RECORD * 1
+DEBUG: 2023-09-15 20:31:21,961: _bolt4.py: fetch_message: _bolt4: [#DE30]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:31:21,962: _bolt4.py: _on_server_state_change: _bolt4: [#DE30]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:33:09,256: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:33:09,258: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:33:09,262: _socket.py: _handshake: _socket: [#CE54]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:33:09,262: _socket.py: _handshake: _socket: [#CE54]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:33:09,264: _socket.py: _handshake: _socket: [#CE54]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:33:09,265: _bolt4.py: hello: _bolt4: [#CE54]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:33:09,271: _bolt4.py: fetch_message: _bolt4: [#CE54]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-963', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:33:09,271: _bolt4.py: _on_server_state_change: _bolt4: [#CE54]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:33:09,271: _bolt4.py: run: _bolt4: [#CE54]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:33:09,271: _bolt4.py: pull: _bolt4: [#CE54]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:33:09,274: _bolt4.py: fetch_message: _bolt4: [#CE54]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:33:09,274: _bolt4.py: _on_server_state_change: _bolt4: [#CE54]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:33:09,275: _bolt4.py: fetch_message: _bolt4: [#CE54]  S: RECORD * 1
+DEBUG: 2023-09-15 20:33:09,276: _bolt4.py: fetch_message: _bolt4: [#CE54]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:33:09,276: _bolt4.py: _on_server_state_change: _bolt4: [#CE54]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:33:20,856: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:33:20,858: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:33:20,861: _socket.py: _handshake: _socket: [#959E]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:33:20,862: _socket.py: _handshake: _socket: [#959E]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:33:20,863: _socket.py: _handshake: _socket: [#959E]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:33:20,864: _bolt4.py: hello: _bolt4: [#959E]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:33:20,870: _bolt4.py: fetch_message: _bolt4: [#959E]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-964', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:33:20,871: _bolt4.py: _on_server_state_change: _bolt4: [#959E]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:33:20,873: _bolt4.py: run: _bolt4: [#959E]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:33:20,873: _bolt4.py: pull: _bolt4: [#959E]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:33:20,877: _bolt4.py: fetch_message: _bolt4: [#959E]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:33:20,877: _bolt4.py: _on_server_state_change: _bolt4: [#959E]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:33:20,878: _bolt4.py: fetch_message: _bolt4: [#959E]  S: RECORD * 1
+DEBUG: 2023-09-15 20:33:20,879: _bolt4.py: fetch_message: _bolt4: [#959E]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:33:20,879: _bolt4.py: _on_server_state_change: _bolt4: [#959E]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:33:48,256: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:33:48,259: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:33:48,263: _socket.py: _handshake: _socket: [#AB1E]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:33:48,263: _socket.py: _handshake: _socket: [#AB1E]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:33:48,269: _socket.py: _handshake: _socket: [#AB1E]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:33:48,271: _bolt4.py: hello: _bolt4: [#AB1E]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:33:48,275: _bolt4.py: fetch_message: _bolt4: [#AB1E]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-973', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:33:48,276: _bolt4.py: _on_server_state_change: _bolt4: [#AB1E]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:33:48,277: _bolt4.py: run: _bolt4: [#AB1E]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:33:48,277: _bolt4.py: pull: _bolt4: [#AB1E]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:33:48,282: _bolt4.py: fetch_message: _bolt4: [#AB1E]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:33:48,282: _bolt4.py: _on_server_state_change: _bolt4: [#AB1E]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:33:48,283: _bolt4.py: fetch_message: _bolt4: [#AB1E]  S: RECORD * 1
+DEBUG: 2023-09-15 20:33:48,284: _bolt4.py: fetch_message: _bolt4: [#AB1E]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:33:48,284: _bolt4.py: _on_server_state_change: _bolt4: [#AB1E]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:33:53,716: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:33:53,718: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:33:53,723: _socket.py: _handshake: _socket: [#E02E]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:33:53,723: _socket.py: _handshake: _socket: [#E02E]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:33:53,724: _socket.py: _handshake: _socket: [#E02E]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:33:53,725: _bolt4.py: hello: _bolt4: [#E02E]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:33:53,731: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-974', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:33:53,732: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:33:53,732: _bolt4.py: run: _bolt4: [#E02E]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:33:53,733: _bolt4.py: pull: _bolt4: [#E02E]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:33:53,738: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:33:53,738: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:33:53,739: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: RECORD * 1
+DEBUG: 2023-09-15 20:33:53,739: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:33:53,739: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:35:23,611: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:35:23,611: multipart.py: callback: multipart: Calling on_field_name with data[0:10]
+DEBUG: 2023-09-15 20:35:23,611: multipart.py: callback: multipart: Calling on_field_data with data[11:19]
+DEBUG: 2023-09-15 20:35:23,611: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_name with data[20:28]
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_data with data[29:47]
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_start with no data
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_name with data[48:56]
+DEBUG: 2023-09-15 20:35:23,612: multipart.py: callback: multipart: Calling on_field_data with data[57:63]
+DEBUG: 2023-09-15 20:35:23,613: multipart.py: callback: multipart: Calling on_field_end with no data
+DEBUG: 2023-09-15 20:35:23,613: multipart.py: callback: multipart: Calling on_end with no data
+DEBUG: 2023-09-15 20:35:23,616: _bolt4.py: begin: _bolt4: [#E02E]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:35:23,618: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:23,618: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:35:23,619: _bolt4.py: run: _bolt4: [#E02E]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:35:23,620: _bolt4.py: pull: _bolt4: [#E02E]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:35:23,624: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'t_first': 2, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:35:23,625: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: RECORD * 1
+DEBUG: 2023-09-15 20:35:23,630: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:35:23,631: _bolt4.py: commit: _bolt4: [#E02E]  C: COMMIT
+DEBUG: 2023-09-15 20:35:23,633: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ'}
+DEBUG: 2023-09-15 20:35:23,633: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:35:23,653: bcrypt.py: safe_verify: bcrypt: trapped unexpected response from 'os_crypt' backend: verify('test', b'$2$04$5BJqKfqMQvV7nS.yUguNcuRfMMOXK0xPWavM7pOzjEi5ze5T1k8/S'):
+Traceback (most recent call last):
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 303, in safe_verify
+    return verify(secret, hash)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+  File "/home/darix/Documents/fastapi_neo4j/env/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 837, in _calc_checksum
+    raise uh.exc.InternalBackendError(
+passlib.exc.InternalBackendError: crypt.crypt() failed for unknown reason; passlib recommends running `pip install bcrypt` for general bcrypt support.(config=<hash <class 'str'> value omitted>, secret=<hash <class 'bytes'> value omitted>)
+DEBUG: 2023-09-15 20:35:23,655: bcrypt.py: _finalize_backend_mixin: bcrypt: 'os_crypt' backend lacks $2$ support, enabling workaround
+DEBUG: 2023-09-15 20:35:29,678: _bolt4.py: begin: _bolt4: [#E02E]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:35:29,679: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:29,679: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:35:29,680: _bolt4.py: run: _bolt4: [#E02E]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:35:29,681: _bolt4.py: pull: _bolt4: [#E02E]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:35:29,684: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'t_first': 1, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:35:29,685: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: RECORD * 1
+DEBUG: 2023-09-15 20:35:29,686: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:35:29,687: _bolt4.py: commit: _bolt4: [#E02E]  C: COMMIT
+DEBUG: 2023-09-15 20:35:29,688: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ'}
+DEBUG: 2023-09-15 20:35:29,689: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:35:29,695: _bolt4.py: begin: _bolt4: [#E02E]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:35:29,696: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:29,697: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:35:29,698: _bolt4.py: rollback: _bolt4: [#E02E]  C: ROLLBACK
+DEBUG: 2023-09-15 20:35:29,699: _bolt4.py: fetch_message: _bolt4: [#E02E]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:29,700: _bolt4.py: _on_server_state_change: _bolt4: [#E02E]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:35:49,278: addressing.py: resolve: addressing: [#0000]  C: <RESOLVE> localhost:7687
+DEBUG: 2023-09-15 20:35:49,281: _socket.py: _connect: _socket: [#0000]  C: <OPEN> 127.0.0.1:7687
+DEBUG: 2023-09-15 20:35:49,285: _socket.py: _handshake: _socket: [#B9B4]  C: <MAGIC> 0x6060B017
+DEBUG: 2023-09-15 20:35:49,285: _socket.py: _handshake: _socket: [#B9B4]  C: <HANDSHAKE> 0x00020404 0x00000104 0x00000004 0x00000003
+DEBUG: 2023-09-15 20:35:49,287: _socket.py: _handshake: _socket: [#B9B4]  S: <HANDSHAKE> 0x00000404
+DEBUG: 2023-09-15 20:35:49,288: _bolt4.py: hello: _bolt4: [#B9B4]  C: HELLO {'user_agent': 'neo4j-python/4.4.11 Python/3.9.5-final-0 (linux)', 'patch_bolt': ['utc'], 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2023-09-15 20:35:49,293: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'server': 'Neo4j/5.4.0', 'connection_id': 'bolt-987', 'hints': {'connection.recv_timeout_seconds': 120}, 'patch_bolt': ['utc']}
+DEBUG: 2023-09-15 20:35:49,293: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: CONNECTED > READY
+DEBUG: 2023-09-15 20:35:49,294: _bolt4.py: run: _bolt4: [#B9B4]  C: RUN 'RETURN 1 AS x' {} {}
+DEBUG: 2023-09-15 20:35:49,294: _bolt4.py: pull: _bolt4: [#B9B4]  C: PULL {'n': -1}
+DEBUG: 2023-09-15 20:35:49,297: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'t_first': 1, 'fields': ['x']}
+DEBUG: 2023-09-15 20:35:49,297: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: READY > STREAMING
+DEBUG: 2023-09-15 20:35:49,298: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: RECORD * 1
+DEBUG: 2023-09-15 20:35:49,300: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:35:49,301: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: STREAMING > READY
+DEBUG: 2023-09-15 20:35:51,755: _bolt4.py: begin: _bolt4: [#B9B4]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:35:51,757: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:51,757: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:35:51,758: _bolt4.py: run: _bolt4: [#B9B4]  C: RUN '\n        MATCH (n:User)\n        WHERE n.email = $pp\n        RETURN n\n        ' {'pp': 'user@example.com'} {}
+DEBUG: 2023-09-15 20:35:51,758: _bolt4.py: pull: _bolt4: [#B9B4]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:35:51,763: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'t_first': 0, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:35:51,764: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: RECORD * 1
+DEBUG: 2023-09-15 20:35:51,768: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'type': 'r', 't_last': 2, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:35:51,769: _bolt4.py: commit: _bolt4: [#B9B4]  C: COMMIT
+DEBUG: 2023-09-15 20:35:51,770: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ'}
+DEBUG: 2023-09-15 20:35:51,770: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:35:51,795: _bolt4.py: begin: _bolt4: [#B9B4]  C: BEGIN {'mode': 'r'}
+DEBUG: 2023-09-15 20:35:51,802: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:51,802: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:35:51,803: _bolt4.py: run: _bolt4: [#B9B4]  C: RUN '\n        MATCH (n:Poste)\n        WHERE n.id = $pp\n        RETURN n\n        ' {'pp': '4225c7d9-9b04-4b7a-9a87-fee5d137cad9'} {}
+DEBUG: 2023-09-15 20:35:51,803: _bolt4.py: pull: _bolt4: [#B9B4]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:35:51,886: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'t_first': 77, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:35:51,887: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: RECORD * 1
+DEBUG: 2023-09-15 20:35:51,888: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'type': 'r', 't_last': 1, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:35:51,889: _bolt4.py: commit: _bolt4: [#B9B4]  C: COMMIT
+DEBUG: 2023-09-15 20:35:51,891: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEKQ'}
+DEBUG: 2023-09-15 20:35:51,892: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2023-09-15 20:35:51,895: _bolt4.py: begin: _bolt4: [#B9B4]  C: BEGIN {}
+DEBUG: 2023-09-15 20:35:51,896: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {}
+DEBUG: 2023-09-15 20:35:51,896: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: READY > TX_READY_OR_TX_STREAMING
+DEBUG: 2023-09-15 20:35:51,900: _bolt4.py: run: _bolt4: [#B9B4]  C: RUN '\n        MERGE (n:Poste { id: $pp })\n        ON MATCH SET n += $set_on_match\n        ON CREATE SET n += $set_on_create\n        SET n += $always_set\n        RETURN n\n        ' {'pp': '4225c7d9-9b04-4b7a-9a87-fee5d137cad9', 'always_set': {'merged': Structure[0x64](1694807544, 842533000), 'id': '4225c7d9-9b04-4b7a-9a87-fee5d137cad9', 'title': 'darix publie un post', 'content': 'le contenu du poste', 'date_created': Structure[0x64](1694804227, 994734000), 'date_updated': Structure[0x64](1694807544, 842481000), 'tags': ['darix']}, 'set_on_match': {}, 'set_on_create': {'created': Structure[0x64](1694807544, 842533000)}} {}
+DEBUG: 2023-09-15 20:35:51,901: _bolt4.py: pull: _bolt4: [#B9B4]  C: PULL {'n': 1000}
+DEBUG: 2023-09-15 20:35:51,972: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'t_first': 70, 'fields': ['n'], 'qid': 0}
+DEBUG: 2023-09-15 20:35:51,976: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: RECORD * 1
+DEBUG: 2023-09-15 20:35:51,977: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'stats': {'properties-set': 7}, 'type': 'rw', 't_last': 3, 'db': 'neo4j'}
+DEBUG: 2023-09-15 20:35:51,977: _bolt4.py: commit: _bolt4: [#B9B4]  C: COMMIT
+DEBUG: 2023-09-15 20:35:52,024: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEOQ'}
+DEBUG: 2023-09-15 20:35:52,024: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: TX_READY_OR_TX_STREAMING > READY
