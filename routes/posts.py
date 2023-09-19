@@ -79,5 +79,5 @@ def delete_post(post_uuid: str, user: UserNode = Depends(get_current_user)):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="The user does not exist")
     
     PosteNode.delete(post_uuid)
-    return HTTPException(status_code=status.HTTP_200_OK, detail=f"User with {post_uuid} was deleting")
+    return HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"User with {post_uuid} was deleting")
 
