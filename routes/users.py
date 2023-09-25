@@ -71,7 +71,7 @@ def delete_user(user_uuid: UUID, user: UserNode = Depends(get_current_user)):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Please provider a valid UUID_USER")
     
     UserNode.delete(user.email)
-    return HTTPException(status_code=status.HTTP_200_OK, detail=f"User with {user_uuid} was succefull delete")
+    return HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"User with {user_uuid} was succefull delete")
 
 @UserRouter.put("/{user_uuid}")
 def update_user_information(user_uuid: UUID, user_update : UserUpdate, user: UserNode = Depends(get_current_user)):
