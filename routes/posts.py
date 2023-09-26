@@ -16,7 +16,7 @@ PostRouter = APIRouter()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/login")
 
-@PostRouter.post("")
+@PostRouter.post("", status_code=status.HTTP_201_CREATED, )
 def add_new_post(post: PostCreate, token = Depends(oauth2_scheme)):
 
     user_exists = decode_jwt(token=token)
@@ -35,9 +35,7 @@ def add_new_post(post: PostCreate, token = Depends(oauth2_scheme)):
 
     posted = Posted(source=users_exist, target=post)
     posted.merge()
-
-
-    return HTTPException(status_code=status.HTTP_201_CREATED, detail="post successfully created")
+    return post
 
 
 @PostRouter.get("")
@@ -72,7 +70,7 @@ def update_post(post_uuid: str, post_update: PostUpdate, user: UserNode = Depend
 
     return HTTPException(status_code=status.HTTP_200_OK, detail=f"User with {post_uuid} was updating")
 
-@PostRouter.delete("/{post_uuid}")
+@PostRouter.delete("/{post_uuid}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_post(post_uuid: str, user: UserNode = Depends(get_current_user)):
 
     if not user:
