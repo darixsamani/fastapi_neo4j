@@ -13,7 +13,7 @@ idna==3.4
 iniconfig==2.0.0
 neo4j==5.13.0
 neontology==1.0.1
-numpy==1.25.2
+numpy==1.24.4
 packaging==23.1
 pandas==1.5.3
 passlib==1.7.4
