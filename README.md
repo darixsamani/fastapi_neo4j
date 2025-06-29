@@ -34,7 +34,7 @@ To use the application, follow the outlined steps:
   5. Start the application:
 
       ```
-        un run main.py
+        uv run main.py
       ```
 
 
