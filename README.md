@@ -12,7 +12,7 @@ A simple starter for building RESTful APIs with FastAPI and NEO4J.
 To use the application, follow the outlined steps:
   1. Clone this repository and create a virtual environment in it:
      ```
-     python3 -m venv venv
+     uv venv
      ```
   2. Install the modules listed in the `requirements.txt` file:
   3. run neo4j instance on docker
@@ -34,7 +34,7 @@ To use the application, follow the outlined steps:
   5. Start the application:
 
       ```
-        python3 main.py
+        un run main.py
       ```
 
 
