@@ -1,13 +1,13 @@
-FROM python:3.8
+FROM python:3.13
 WORKDIR /app
 
 ADD pyproject.toml /app/pyproject.toml
 
-RUN pip install poetry
-RUN poetry install
-
+RUN pip install uv
+RUN uv venv
+RUN uv pip install .
 COPY ./ /app
 
-EXPOSE 8000
+EXPOSE 8080
 
-CMD ["poetry", "run", "fastapi", "run", "app.py"]
+CMD ["uv", "run", "main.py"]

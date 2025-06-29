@@ -2,8 +2,7 @@ from typing import ClassVar
 from pydantic import EmailStr, Field
 from uuid import uuid4, UUID
 import pandas as pd
-from neontology import BaseNode, BaseRelationship, init_neontology, auto_constrain
-from datetime import datetime
+from neontology import BaseNode, BaseRelationship
 
 
 # We define nodes by inheriting from BaseNode

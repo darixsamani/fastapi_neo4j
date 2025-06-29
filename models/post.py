@@ -1,7 +1,7 @@
 from typing import ClassVar
 from pydantic import EmailStr
 import pandas as pd
-from neontology import BaseNode, BaseRelationship, init_neontology, auto_constrain
+from neontology import BaseNode, BaseRelationship
 from datetime import datetime
 from .user import UserNode
 from typing import List

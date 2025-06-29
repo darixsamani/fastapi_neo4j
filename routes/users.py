@@ -8,7 +8,6 @@ from fastapi.security import OAuth2PasswordRequestForm
 from auth.jwt_handler import sign_jwt
 import logging
 from passlib.context import CryptContext
-from jwt import PyJWTError
 from auth.deps import get_current_user
 from uuid import UUID
 

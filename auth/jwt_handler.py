@@ -1,6 +1,5 @@
 import time
 from typing import Dict
-from jwt import encode, decode
 
 from config.config import Settings
 

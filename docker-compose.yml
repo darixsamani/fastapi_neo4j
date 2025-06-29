@@ -1,6 +1,14 @@
-version: "3"
-
 services:
+
+  neo4j:
+    image: neo4j:latest
+    
+    environment:
+      - NEO4J_AUTH=neo4j/darixsamani
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+  
   web:
     build: .
     ports:
@@ -8,18 +16,11 @@ services:
     env_file:
       - .env.dev
 
-  neo4j:
-    image: ne4j:latest
+    depends_on:
+      - neo4j
+
+  
     
-    environment:
-      - NEO4J_AUTH=neo4j/darixsamani
-    ports:
-      - "7474": "7474"
-      - "7687": "7687"
-    volumes:
-      - data : /data
-      - data/logs : /logs
-
-
 volumes:
   data:
+  data_logs:

@@ -5326,3 +5326,257 @@ DEBUG: 2023-09-15 20:35:51,977: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SU
 DEBUG: 2023-09-15 20:35:51,977: _bolt4.py: commit: _bolt4: [#B9B4]  C: COMMIT
 DEBUG: 2023-09-15 20:35:52,024: _bolt4.py: fetch_message: _bolt4: [#B9B4]  S: SUCCESS {'bookmark': 'FB:kcwQMeGFGAUQTl2SHqCDT4KDcEOQ'}
 DEBUG: 2023-09-15 20:35:52,024: _bolt4.py: _on_server_state_change: _bolt4: [#B9B4]  State: TX_READY_OR_TX_STREAMING > READY
+DEBUG: 2025-06-17 18:51:33,746: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:51:33,748: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:51:33,748: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:51:33,748: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:51:33,748: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:51:33,748: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:51:33,753: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:51:33,753: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:51:33,754: _bolt_socket.py: _handshake: _bolt_socket: [#CC92]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:51:33,754: _bolt_socket.py: _handshake: _bolt_socket: [#CC92]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:51:33,755: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#CC92]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:51:33,755: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#CC92]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:51:33,756: _bolt5.py: hello: _bolt5: [#CC92]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:51:33,756: _bolt5.py: _on_client_state_change: _bolt5: [#CC92]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:51:33,756: _bolt5.py: logon: _bolt5: [#CC92]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:51:33,756: _bolt5.py: _on_client_state_change: _bolt5: [#CC92]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:51:33,757: _bolt5.py: _process_message: _bolt5: [#CC92]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-25', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:51:33,757: _bolt5.py: _on_server_state_change: _bolt5: [#CC92]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:51:33,760: _bolt5.py: _process_message: _bolt5: [#CC92]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:51:33,760: _bolt.py: kill: _bolt: [#CC92]  C: <KILL>
+DEBUG: 2025-06-17 18:51:33,760: _bolt.py: open: _bolt: [#CC92]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:53:03,711: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:53:03,711: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:53:03,711: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:53:03,711: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:53:03,711: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:53:03,711: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:53:03,712: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:53:03,712: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:53:03,713: _bolt_socket.py: _handshake: _bolt_socket: [#B100]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:53:03,713: _bolt_socket.py: _handshake: _bolt_socket: [#B100]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:53:03,714: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#B100]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:53:03,714: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#B100]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:53:03,714: _bolt5.py: hello: _bolt5: [#B100]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:53:03,715: _bolt5.py: _on_client_state_change: _bolt5: [#B100]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:53:03,715: _bolt5.py: logon: _bolt5: [#B100]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:53:03,715: _bolt5.py: _on_client_state_change: _bolt5: [#B100]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:53:03,717: _bolt5.py: _process_message: _bolt5: [#B100]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-28', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:53:03,717: _bolt5.py: _on_server_state_change: _bolt5: [#B100]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:53:03,721: _bolt5.py: _process_message: _bolt5: [#B100]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:53:03,721: _bolt.py: kill: _bolt: [#B100]  C: <KILL>
+DEBUG: 2025-06-17 18:53:03,721: _bolt.py: open: _bolt: [#B100]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:53:46,636: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:53:46,636: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:53:46,636: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:53:46,636: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:53:46,636: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:53:46,637: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:53:46,637: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:53:46,638: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:53:46,638: _bolt_socket.py: _handshake: _bolt_socket: [#A2EE]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:53:46,638: _bolt_socket.py: _handshake: _bolt_socket: [#A2EE]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:53:46,639: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#A2EE]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:53:46,639: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#A2EE]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:53:46,639: _bolt5.py: hello: _bolt5: [#A2EE]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:53:46,640: _bolt5.py: _on_client_state_change: _bolt5: [#A2EE]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:53:46,640: _bolt5.py: logon: _bolt5: [#A2EE]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:53:46,640: _bolt5.py: _on_client_state_change: _bolt5: [#A2EE]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:53:46,641: _bolt5.py: _process_message: _bolt5: [#A2EE]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-29', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:53:46,641: _bolt5.py: _on_server_state_change: _bolt5: [#A2EE]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:53:46,643: _bolt5.py: _process_message: _bolt5: [#A2EE]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:53:46,643: _bolt.py: kill: _bolt: [#A2EE]  C: <KILL>
+DEBUG: 2025-06-17 18:53:46,644: _bolt.py: open: _bolt: [#A2EE]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:54:54,726: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:54:54,727: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:54:54,727: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:54:54,727: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:54:54,727: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:54:54,727: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:54:54,728: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:54:54,728: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:54:54,728: _bolt_socket.py: _handshake: _bolt_socket: [#98FE]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:54:54,729: _bolt_socket.py: _handshake: _bolt_socket: [#98FE]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:54:54,729: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#98FE]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:54:54,730: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#98FE]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:54:54,730: _bolt5.py: hello: _bolt5: [#98FE]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:54:54,730: _bolt5.py: _on_client_state_change: _bolt5: [#98FE]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:54:54,730: _bolt5.py: logon: _bolt5: [#98FE]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:54:54,730: _bolt5.py: _on_client_state_change: _bolt5: [#98FE]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:54:54,734: _bolt5.py: _process_message: _bolt5: [#98FE]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-31', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:54:54,734: _bolt5.py: _on_server_state_change: _bolt5: [#98FE]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:54:54,734: _bolt5.py: _process_message: _bolt5: [#98FE]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:54:54,734: _bolt.py: kill: _bolt: [#98FE]  C: <KILL>
+DEBUG: 2025-06-17 18:54:54,734: _bolt.py: open: _bolt: [#98FE]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:54:55,684: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:54:55,684: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:54:55,685: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:54:55,685: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:54:55,685: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:54:55,685: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:54:55,686: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:54:55,686: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:54:55,686: _bolt_socket.py: _handshake: _bolt_socket: [#9912]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:54:55,686: _bolt_socket.py: _handshake: _bolt_socket: [#9912]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:54:55,687: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#9912]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:54:55,687: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#9912]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:54:55,687: _bolt5.py: hello: _bolt5: [#9912]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:54:55,687: _bolt5.py: _on_client_state_change: _bolt5: [#9912]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:54:55,688: _bolt5.py: logon: _bolt5: [#9912]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:54:55,688: _bolt5.py: _on_client_state_change: _bolt5: [#9912]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:54:55,688: _bolt5.py: _process_message: _bolt5: [#9912]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-33', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:54:55,688: _bolt5.py: _on_server_state_change: _bolt5: [#9912]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:54:55,690: _bolt5.py: _process_message: _bolt5: [#9912]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:54:55,690: _bolt.py: kill: _bolt: [#9912]  C: <KILL>
+DEBUG: 2025-06-17 18:54:55,690: _bolt.py: open: _bolt: [#9912]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:55:02,398: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:55:02,399: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:55:02,399: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:55:02,399: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:55:02,399: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:55:02,399: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:55:02,400: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:55:02,400: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:55:02,400: _bolt_socket.py: _handshake: _bolt_socket: [#991A]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:55:02,400: _bolt_socket.py: _handshake: _bolt_socket: [#991A]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:55:02,402: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#991A]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:55:02,402: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#991A]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:55:02,402: _bolt5.py: hello: _bolt5: [#991A]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:55:02,402: _bolt5.py: _on_client_state_change: _bolt5: [#991A]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:55:02,402: _bolt5.py: logon: _bolt5: [#991A]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:55:02,402: _bolt5.py: _on_client_state_change: _bolt5: [#991A]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:55:02,406: _bolt5.py: _process_message: _bolt5: [#991A]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-34', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:55:02,406: _bolt5.py: _on_server_state_change: _bolt5: [#991A]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:55:02,406: _bolt5.py: _process_message: _bolt5: [#991A]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:55:02,406: _bolt.py: kill: _bolt: [#991A]  C: <KILL>
+DEBUG: 2025-06-17 18:55:02,406: _bolt.py: open: _bolt: [#991A]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:56:33,019: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:56:33,019: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:56:33,019: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:56:33,019: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:56:33,020: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:56:33,020: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:56:33,020: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:56:33,021: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:56:33,021: _bolt_socket.py: _handshake: _bolt_socket: [#C0DE]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:56:33,021: _bolt_socket.py: _handshake: _bolt_socket: [#C0DE]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:56:33,023: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#C0DE]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:56:33,023: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#C0DE]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:56:33,024: _bolt5.py: hello: _bolt5: [#C0DE]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:56:33,024: _bolt5.py: _on_client_state_change: _bolt5: [#C0DE]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:56:33,024: _bolt5.py: logon: _bolt5: [#C0DE]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:56:33,024: _bolt5.py: _on_client_state_change: _bolt5: [#C0DE]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:56:33,027: _bolt5.py: _process_message: _bolt5: [#C0DE]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-36', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:56:33,027: _bolt5.py: _on_server_state_change: _bolt5: [#C0DE]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:56:33,028: _bolt5.py: _process_message: _bolt5: [#C0DE]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:56:33,028: _bolt.py: kill: _bolt: [#C0DE]  C: <KILL>
+DEBUG: 2025-06-17 18:56:33,028: _bolt.py: open: _bolt: [#C0DE]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:57:13,390: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:57:13,390: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:57:13,390: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:57:13,390: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:57:13,390: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:57:13,391: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:57:13,391: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:57:13,391: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:57:13,392: _bolt_socket.py: _handshake: _bolt_socket: [#EAC4]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:57:13,392: _bolt_socket.py: _handshake: _bolt_socket: [#EAC4]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:57:13,394: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#EAC4]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:57:13,394: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#EAC4]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:57:13,394: _bolt5.py: hello: _bolt5: [#EAC4]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:57:13,394: _bolt5.py: _on_client_state_change: _bolt5: [#EAC4]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:57:13,394: _bolt5.py: logon: _bolt5: [#EAC4]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:57:13,394: _bolt5.py: _on_client_state_change: _bolt5: [#EAC4]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:57:13,396: _bolt5.py: _process_message: _bolt5: [#EAC4]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-38', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:57:13,396: _bolt5.py: _on_server_state_change: _bolt5: [#EAC4]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:57:13,398: _bolt5.py: _process_message: _bolt5: [#EAC4]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:57:13,398: _bolt.py: kill: _bolt: [#EAC4]  C: <KILL>
+DEBUG: 2025-06-17 18:57:13,399: _bolt.py: open: _bolt: [#EAC4]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:57:14,393: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:57:14,393: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:57:14,393: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:57:14,393: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:57:14,393: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:57:14,393: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:57:14,394: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:57:14,394: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:57:14,394: _bolt_socket.py: _handshake: _bolt_socket: [#EAD0]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:57:14,394: _bolt_socket.py: _handshake: _bolt_socket: [#EAD0]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:57:14,395: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#EAD0]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:57:14,395: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#EAD0]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:57:14,395: _bolt5.py: hello: _bolt5: [#EAD0]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:57:14,396: _bolt5.py: _on_client_state_change: _bolt5: [#EAD0]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:57:14,396: _bolt5.py: logon: _bolt5: [#EAD0]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:57:14,396: _bolt5.py: _on_client_state_change: _bolt5: [#EAD0]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:57:14,397: _bolt5.py: _process_message: _bolt5: [#EAD0]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-39', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:57:14,397: _bolt5.py: _on_server_state_change: _bolt5: [#EAD0]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:57:14,399: _bolt5.py: _process_message: _bolt5: [#EAD0]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:57:14,399: _bolt.py: kill: _bolt: [#EAD0]  C: <KILL>
+DEBUG: 2025-06-17 18:57:14,399: _bolt.py: open: _bolt: [#EAD0]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:57:58,389: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:57:58,389: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:57:58,389: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:57:58,389: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:57:58,389: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:57:58,389: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:57:58,390: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:57:58,390: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:57:58,391: _bolt_socket.py: _handshake: _bolt_socket: [#910E]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:57:58,391: _bolt_socket.py: _handshake: _bolt_socket: [#910E]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:57:58,392: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#910E]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:57:58,392: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#910E]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:57:58,393: _bolt5.py: hello: _bolt5: [#910E]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:57:58,393: _bolt5.py: _on_client_state_change: _bolt5: [#910E]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:57:58,393: _bolt5.py: logon: _bolt5: [#910E]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:57:58,393: _bolt5.py: _on_client_state_change: _bolt5: [#910E]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:57:58,394: _bolt5.py: _process_message: _bolt5: [#910E]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-41', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:57:58,394: _bolt5.py: _on_server_state_change: _bolt5: [#910E]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:57:58,397: _bolt5.py: _process_message: _bolt5: [#910E]  S: FAILURE {'neo4j_code': 'Neo.ClientError.Security.Unauthorized', 'message': 'The client is unauthorized due to authentication failure.', 'gql_status': '42NFF', 'description': 'error: syntax error or access rule violation - permission/access denied. Access denied, see the security logs for details.', 'diagnostic_record': {'_classification': 'CLIENT_ERROR'}}
+DEBUG: 2025-06-17 18:57:58,397: _bolt.py: kill: _bolt: [#910E]  C: <KILL>
+DEBUG: 2025-06-17 18:57:58,397: _bolt.py: open: _bolt: [#910E]  C: <OPEN FAILED> AuthError('The client is unauthorized due to authentication failure.')
+DEBUG: 2025-06-17 18:59:34,047: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 18:59:34,047: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 18:59:34,047: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 18:59:34,047: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 18:59:34,047: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 18:59:34,047: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 18:59:34,048: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 18:59:34,048: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 18:59:34,049: _bolt_socket.py: _handshake: _bolt_socket: [#DD92]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 18:59:34,049: _bolt_socket.py: _handshake: _bolt_socket: [#DD92]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 18:59:34,050: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#DD92]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 18:59:34,050: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#DD92]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 18:59:34,050: _bolt5.py: hello: _bolt5: [#DD92]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 18:59:34,050: _bolt5.py: _on_client_state_change: _bolt5: [#DD92]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:59:34,050: _bolt5.py: logon: _bolt5: [#DD92]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 18:59:34,050: _bolt5.py: _on_client_state_change: _bolt5: [#DD92]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:59:34,051: _bolt5.py: _process_message: _bolt5: [#DD92]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-57', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 18:59:34,051: _bolt5.py: _on_server_state_change: _bolt5: [#DD92]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 18:59:34,053: _bolt5.py: _process_message: _bolt5: [#DD92]  S: SUCCESS {'advertised_address': 'localhost:7687'}
+DEBUG: 2025-06-17 18:59:34,053: _bolt5.py: _on_server_state_change: _bolt5: [#DD92]  _: <CONNECTION> server state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 18:59:34,053: _pool.py: release: _pool: [#DD92]  _: <POOL> released bolt-57
+INFO: 2025-06-17 18:59:34,053: graphconnection.py: init_neontology: graphconnection: Neontology initialized.
+DEBUG: 2025-06-17 19:10:01,158: _pool.py: open: _pool: [#0000]  _: <POOL> created, direct address IPv4Address(('localhost', 7687))
+DEBUG: 2025-06-17 19:10:01,158: workspace.py: _get_routing_target_database: workspace: [#0000]  _: <WORKSPACE> routing towards fixed database: None
+DEBUG: 2025-06-17 19:10:01,159: workspace.py: _set_pinned_database: workspace: [#0000]  _: <WORKSPACE> pinning database: None
+DEBUG: 2025-06-17 19:10:01,159: _pool.py: acquire: _pool: [#0000]  _: <POOL> acquire direct connection, access_mode='READ', database=AcquisitionDatabase(name=None, guessed=False)
+DEBUG: 2025-06-17 19:10:01,159: _pool.py: _acquire: _pool: [#0000]  _: <POOL> trying to hand out new connection
+DEBUG: 2025-06-17 19:10:01,159: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> in: localhost:7687
+DEBUG: 2025-06-17 19:10:01,160: _util.py: resolve_address: _util: [#0000]  _: <RESOLVE> dns resolver out: [::1]:7687
+DEBUG: 2025-06-17 19:10:01,160: _bolt_socket.py: _connect_secure: _bolt_socket: [#0000]  C: <OPEN> [::1]:7687
+DEBUG: 2025-06-17 19:10:01,160: _bolt_socket.py: _handshake: _bolt_socket: [#8F4A]  C: <MAGIC> 0x6060B017
+DEBUG: 2025-06-17 19:10:01,160: _bolt_socket.py: _handshake: _bolt_socket: [#8F4A]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+DEBUG: 2025-06-17 19:10:01,161: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#8F4A]  S: <HANDSHAKE> 0x000001FF [3] 0x00040404 0x00040405 0x00020805 0x00
+DEBUG: 2025-06-17 19:10:01,161: _bolt_socket.py: _parse_handshake_response_v2: _bolt_socket: [#8F4A]  C: <HANDSHAKE> 0x00000805 0x00
+DEBUG: 2025-06-17 19:10:01,161: _bolt5.py: hello: _bolt5: [#8F4A]  C: HELLO {'user_agent': 'neo4j-python/5.28.1 Python/3.13.5-final-0 (linux)', 'bolt_agent': {'product': 'neo4j-python/5.28.1', 'platform': 'Linux 6.1.0-37-amd64; x86_64', 'language': 'Python/3.13.5-final-0', 'language_details': 'CPython; 3.13.5-final-0 (main, Jun 12 2025 12:40:22) [Clang 20.1.4 ]'}}
+DEBUG: 2025-06-17 19:10:01,162: _bolt5.py: _on_client_state_change: _bolt5: [#8F4A]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 19:10:01,162: _bolt5.py: logon: _bolt5: [#8F4A]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG: 2025-06-17 19:10:01,162: _bolt5.py: _on_client_state_change: _bolt5: [#8F4A]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 19:10:01,165: _bolt5.py: _process_message: _bolt5: [#8F4A]  S: SUCCESS {'server': 'Neo4j/2025.05.0', 'protocol_version': '5.8', 'connection_id': 'bolt-58', 'hints': {'connection.recv_timeout_seconds': 120, 'ssr.enabled': True}}
+DEBUG: 2025-06-17 19:10:01,165: _bolt5.py: _on_server_state_change: _bolt5: [#8F4A]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG: 2025-06-17 19:10:01,166: _bolt5.py: _process_message: _bolt5: [#8F4A]  S: SUCCESS {'advertised_address': 'localhost:7687'}
+DEBUG: 2025-06-17 19:10:01,166: _bolt5.py: _on_server_state_change: _bolt5: [#8F4A]  _: <CONNECTION> server state: AUTHENTICATION > READY
+DEBUG: 2025-06-17 19:10:01,166: _pool.py: release: _pool: [#8F4A]  _: <POOL> released bolt-58
+INFO: 2025-06-17 19:10:01,166: graphconnection.py: init_neontology: graphconnection: Neontology initialized.
