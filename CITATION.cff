@@ -14,7 +14,7 @@ authors:
     orcid: 'https://orcid.org/0009-0001-0794-7120'
 repository-code: 'https://github.com/darixsamani/fastapi_neo4j'
 abstract: >-
-  Template for building FastAPI applications with Neo4j.
+  Template for building FastAPI applications with Neo4j(neontology).
 keywords:
   - fastapi
   - neo4j
