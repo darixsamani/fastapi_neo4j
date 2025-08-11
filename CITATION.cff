@@ -18,5 +18,5 @@ abstract: >-
 keywords:
   - fastapi
   - neo4j
-  - asynchronous
+  - neontology
 license: MIT
